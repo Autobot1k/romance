@@ -1,56 +1,30 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.w3c.dom.Text;
-
-import java.util.Properties;
 
 
-
-
-
-public class MainPage {
-    int number =0;
-    String mainUrl = "https://romanceabroad.com/";
-    WebDriver driver;
-    String currentUrlSearch;
+public class MainTests extends BaseUI {
     String currentTitleSearch;
     String expectedTabTitle = "TOUR TO UKRAINE";
     String expectedTitleBlog = "Blog";
     String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     String expectedUrlFindPeople = "https://romanceabroad.com/users/search";
     String expectedUrlPhotos = "https://romanceabroad.com/media/index";
-    String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
+
     By LINK_HOW_WE_WORK = By.xpath(" //a[@href='https://romanceabroad.com/content/view/how-it-works']");
     By LINK_FIND_People = By.cssSelector("#main_search_button_user_line");
     By LINK_PRETTY_Women = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
     By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");
-    By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
     By LINK_TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
     By LINK_BLOG = By.xpath("//*[contains(text(),'BLOG')]");
     By LINK_SignIn = By.xpath("//a[@id='ajax_login_link']");
-    By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
-    By EMAIL_FIELD = By.cssSelector("input#email");
-    By PASSWORD_FIELD = By.cssSelector("input#password");
-    By BUTTON_NEXT = By.xpath("By.xpath(\"//button[@data-action='next-page'][text()='Next']\")");
-    int index_link_PRETTY_Women = 0;
 
-    @BeforeMethod
-    public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(mainUrl);
-    }
+    int index_link_PRETTY_Women = 0;
 
 
     @Test
-    public void testHowWeWorkPage(){
+    public void testHowWeWorkPage() {
         driver.findElement(LINK_HOW_WE_WORK).click();
         currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
@@ -62,12 +36,12 @@ public class MainPage {
     }
 
     @Test
-    public void testPrettyWomenPage(){
+    public void testPrettyWomenPage() {
         driver.findElements(LINK_PRETTY_Women).get(index_link_PRETTY_Women).click();
     }
 
     @Test
-    public void testPhotosPage(){
+    public void testPhotosPage() {
         driver.findElement(LINK_PHOTOS).click();
         currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
@@ -75,22 +49,14 @@ public class MainPage {
     }
 
     @Test
-    public void testGiftsPage(){
-        driver.findElement(LINK_GIFTS).click();
-        currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, expectedUrlGifts);
-    }
-
-    @Test
-    public void testTourToUkrainePage(){
+    public void testTourToUkrainePage() {
         currentTitleSearch = driver.findElement(LINK_TOUR_TO_UKRAINE).getText();
         System.out.println(currentTitleSearch);
         Assert.assertEquals(currentTitleSearch, expectedTabTitle);
     }
 
     @Test
-    public void testBlogPage(){
+    public void testBlogPage() {
         driver.findElement(LINK_BLOG).click();
         currentTitleSearch = driver.getTitle();
         System.out.println(currentTitleSearch);
@@ -103,23 +69,7 @@ public class MainPage {
         linkSignIn.click();
     }
 
-    @Test
-    public void testRegistartion(){
-        driver.findElement(BUTTON_REGISTRATION).click();
-        driver.findElement(EMAIL_FIELD).sendKeys("AAA@gmail.com");
-        driver.findElement(PASSWORD_FIELD).sendKeys("AAAAAA");
-        driver.findElement(BUTTON_NEXT).click();
-    }
-
-    @AfterMethod
-    public void afterActions(){
-        driver.quit();
-    }
-
 }
-
-
-
 
 
 // 10 xPaths:
@@ -135,7 +85,6 @@ public class MainPage {
 //9. For "Join Today" web-element: //a[contains(text(),'JOIN TODAY')]
 //10. For "Book Now" web-element: //div/a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']
 //11. For "Pretty Women" web-element: //a[@href ='https://romanceabroad.com/users/search']
-
 
 
 // 10 css selectors:
