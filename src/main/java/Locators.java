@@ -2,6 +2,12 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+    //MainPage
+    public static final By FIND_YOU_TUBE_VIDEO = (By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
+    public static final By CLICK_YOU_TUBE_VIDEO = (By.xpath("//button[@class='ytp-large-play-button ytp-button']"));
+
+
+
     //Gifts
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
 
@@ -13,4 +19,32 @@ public class Locators {
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By USERNAME_FIELD = By.cssSelector("#nickname");
     public static final By PHONE_FIELD = By.cssSelector("input[name='data[phone]']");
+    public static final By LOCATION_FIELD = By.xpath("//input[@name='region_name']");
+    public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");
+
+
+    //How we work tab
+    public static final By LINK_HOW_WE_WORK = By.xpath(" //a[@href='https://romanceabroad.com/content/view/how-it-works']");
+
+    //Pretty Woman tab
+    public static final By LINK_SEARCH = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
+
+    //Photos tab
+    public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");
+
+    //Tour to Ukraine tab
+    public static final By LINK_TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
+
+    //Blog tab
+    public static final By LINK_BLOG = By.xpath("//a[contains(text(),'BLOG')]");
+
+    //Sign IN tab
+    public static final By LINK_SignIn = By.xpath("//a[@id='ajax_login_link']");
+
+    //Search
+    public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By DROP_DOWN_LIST_AGE_MIN = By.cssSelector("#age_min");
+    public static final By DROP_DOWN_LIST_AGE_MAX = By.cssSelector("#age_max");
+    public static final By SEARCH_CLICK = By.cssSelector("#main_search_button_user_advanced");
+
 }

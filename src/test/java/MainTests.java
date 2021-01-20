@@ -1,73 +1,61 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 public class MainTests extends BaseUI {
-    String currentTitleSearch;
-    String expectedTabTitle = "TOUR TO UKRAINE";
-    String expectedTitleBlog = "Blog";
-    String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
-    String expectedUrlFindPeople = "https://romanceabroad.com/users/search";
-    String expectedUrlPhotos = "https://romanceabroad.com/media/index";
-
-    By LINK_HOW_WE_WORK = By.xpath(" //a[@href='https://romanceabroad.com/content/view/how-it-works']");
-    By LINK_FIND_People = By.cssSelector("#main_search_button_user_line");
-    By LINK_PRETTY_Women = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
-    By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");
-    By LINK_TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
-    By LINK_BLOG = By.xpath("//*[contains(text(),'BLOG')]");
-    By LINK_SignIn = By.xpath("//a[@id='ajax_login_link']");
-
-    int index_link_PRETTY_Women = 0;
-
 
     @Test
-    public void testHowWeWorkPage() {
-        driver.findElement(LINK_HOW_WE_WORK).click();
-        currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, expectedUrlHowWeWork);
-        driver.findElement(LINK_FIND_People).click();
-        currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, expectedUrlFindPeople);
+    public void testVideoWebElement () throws InterruptedException {
+        Thread.sleep(5000);
+        WebElement ele = driver.findElement(Locators.FIND_YOU_TUBE_VIDEO);
+        driver.switchTo().frame(ele);
+        driver.findElement(Locators.CLICK_YOU_TUBE_VIDEO).click();
+
     }
 
-    @Test
-    public void testPrettyWomenPage() {
-        driver.findElements(LINK_PRETTY_Women).get(index_link_PRETTY_Women).click();
-    }
 
-    @Test
-    public void testPhotosPage() {
-        driver.findElement(LINK_PHOTOS).click();
-        currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, expectedUrlPhotos);
-    }
-
-    @Test
-    public void testTourToUkrainePage() {
-        currentTitleSearch = driver.findElement(LINK_TOUR_TO_UKRAINE).getText();
-        System.out.println(currentTitleSearch);
-        Assert.assertEquals(currentTitleSearch, expectedTabTitle);
-    }
-
-    @Test
-    public void testBlogPage() {
-        driver.findElement(LINK_BLOG).click();
-        currentTitleSearch = driver.getTitle();
-        System.out.println(currentTitleSearch);
-        Assert.assertEquals(currentTitleSearch, expectedTitleBlog);
-    }
-
-    @Test
-    public void testSignInPage() {
-        WebElement linkSignIn = driver.findElement(LINK_SignIn);
-        linkSignIn.click();
-    }
+//    @Test
+//    public void testHowWeWorkPage() {
+//        driver.findElement(Locators.LINK_HOW_WE_WORK).click();
+//        currentUrlSearch = driver.getCurrentUrl();
+//        System.out.println(currentUrlSearch);
+//        Assert.assertEquals(currentUrlSearch, Data.expectedUrlHowWeWork);
+//
+//    }
+//
+//    @Test
+//    public void testPrettyWomenPage() {
+//        driver.findElements(Locators.LINK_SEARCH).get(Data.index_link_PRETTY_Women).click();
+//    }
+//
+//    @Test
+//    public void testPhotosPage() {
+//        driver.findElement(Locators.LINK_PHOTOS).click();
+//        currentUrlSearch = driver.getCurrentUrl();
+//        System.out.println(currentUrlSearch);
+//        Assert.assertEquals(currentUrlSearch, Data.expectedUrlPhotos);
+//    }
+//
+//    @Test
+//    public void testTourToUkrainePage() {
+//        currentTitleSearch = driver.findElement(Locators.LINK_TOUR_TO_UKRAINE).getText();
+//        System.out.println(currentTitleSearch);
+//        Assert.assertEquals(currentTitleSearch, Data.expectedTabTitle);
+//    }
+//
+//    @Test
+//    public void testBlogPage() {
+//        driver.findElement(Locators.LINK_BLOG).click();
+//        currentTitleSearch = driver.getTitle();
+//        System.out.println(currentTitleSearch);
+//        Assert.assertEquals(currentTitleSearch, Data.expectedTitleBlog);
+//    }
+//
+//    @Test
+//    public void testSignInPage() {
+//        WebElement linkSignIn = driver.findElement(Locators.LINK_SignIn);
+//        linkSignIn.click();
+//    }
 
 }
 
