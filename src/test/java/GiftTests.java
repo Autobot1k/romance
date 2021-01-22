@@ -11,4 +11,5 @@ public class GiftTests extends BaseUI {
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedUrlGifts);
     }
+
 }

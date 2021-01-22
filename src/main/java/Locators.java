@@ -18,6 +18,12 @@ public class Locators {
     public static final By PASSWORD_FIELD = By.cssSelector("input#password");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By USERNAME_FIELD = By.cssSelector("#nickname");
+    public static final By SELECT_DAY_FIELD = By.cssSelector("#daySelect");
+    public static final By PICK_A_DAY = By.xpath("//li[@data-handler='selectDay']//a[text()='3']");
+    public static final By SELECT_MONTH_FIELD = By.cssSelector("#monthSelect");
+    public static final By PICK_A_MONTH = By.xpath("//li[@data-handler='selectMonth']//a[text()='Jun']");
+    public static final By SELECT_YEAR_FIELD = By.cssSelector("#yearSelect");
+    public static final By PICK_A_YEAR = By.xpath("//li[@data-handler='selectYear']//a[text()='2002']");
     public static final By PHONE_FIELD = By.cssSelector("input[name='data[phone]']");
     public static final By LOCATION_FIELD = By.xpath("//input[@name='region_name']");
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");

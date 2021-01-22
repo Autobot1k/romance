@@ -1,5 +1,7 @@
 public class Data {
 
+
+
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";

@@ -10,12 +10,20 @@ public class BaseUI {
     WebDriver driver;
     WebDriverWait wait;
     String mainUrl = "https://romanceabroad.com/";
+    MainPage mainPage;
+    SearchPage searchPage;
+    RegistrationPage registrationPage;
+//    String mainUrl = "https://www.computerhope.com/jargon/r/radiobut.htm";
+//    String mainUrl = "https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/";
 
     @BeforeMethod
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 20);
+        mainPage = new MainPage(driver, wait);
+        searchPage = new SearchPage(driver, wait);
+        registrationPage = new RegistrationPage(driver,wait);
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }
