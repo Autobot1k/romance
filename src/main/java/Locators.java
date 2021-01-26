@@ -5,6 +5,7 @@ public class Locators {
     //MainPage
     public static final By FIND_YOU_TUBE_VIDEO = (By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
     public static final By CLICK_YOU_TUBE_VIDEO = (By.xpath("//button[@class='ytp-large-play-button ytp-button']"));
+    public static final By MAIN_PAGE_LIST = (By.xpath("//ul[@class='navbar-nav']//li"));
 
 
 

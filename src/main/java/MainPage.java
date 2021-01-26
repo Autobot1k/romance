@@ -21,10 +21,10 @@ public class MainPage extends BaseActions {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
         driver.findElement(Locators.PASSWORD_FIELD).sendKeys(Data.passwordInput);
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
+        driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
     public void completeSecondPartOfRegistartion(){
-        driver.findElement(Locators.BUTTON_NEXT).click();
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(generateNewNumber(Data.usernameInput, 10));
         driver.findElement(Locators.SELECT_DAY_FIELD).click();
         driver.findElement(Locators.PICK_A_DAY).click();

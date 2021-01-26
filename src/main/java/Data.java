@@ -1,5 +1,8 @@
 public class Data {
 
+    //Main
+    public static final String MAIN_URL = "https://romanceabroad.com";
+
 
 
     //Gifts
