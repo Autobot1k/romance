@@ -95,5 +95,16 @@ public class Conditions extends BaseUI {
 
     }
 
+    @Test
+    public void test8() {
+
+        List<String> employees = new ArrayList<>(Arrays.asList("Alex", "John", "Bob"));
+        System.out.println(employees.size());
+        for (int i = 0; i < employees.size(); i++) {
+            String info = employees.get(i);
+            System.out.println(info);
+            Assert.assertTrue(employees.contains("Alex"));
+            }
+        }
 
 }

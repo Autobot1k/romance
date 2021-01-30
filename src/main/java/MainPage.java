@@ -36,6 +36,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LOCATION_FIELD).clear();
         driver.findElement(Locators.LOCATION_FIELD).sendKeys(Data.locationInput);
 
+
         WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
         boolean selectedCheckbox = checkboxConfirmation.isSelected();
         System.out.println(selectedCheckbox + Data.printCheckboxConf);
