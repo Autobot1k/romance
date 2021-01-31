@@ -20,6 +20,7 @@ public class BaseUI {
     MainPage mainPage;
     SearchPage searchPage;
     RegistrationPage registrationPage;
+    MediaPage mediaPage;
     SoftAssert softAssert = new SoftAssert();
 //    String mainUrl = "https://www.computerhope.com/jargon/r/radiobut.htm";
 //    String mainUrl = "https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/";
@@ -78,6 +79,7 @@ public class BaseUI {
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);
         registrationPage = new RegistrationPage(driver,wait);
+        mediaPage = new MediaPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }

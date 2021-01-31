@@ -38,8 +38,8 @@ public class MainPage extends BaseActions {
 
 
         WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-        boolean selectedCheckbox = checkboxConfirmation.isSelected();
-        System.out.println(selectedCheckbox + Data.printCheckboxConf);
+//        boolean selectedCheckbox = checkboxConfirmation.isSelected();
+        System.out.println(Data.printCheckboxConf);
         checkboxConfirmation.click();
     }
 

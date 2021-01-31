@@ -8,4 +8,9 @@ public class SearchPage extends BaseActions {
         super(driver, wait);
     }
 
+    public void clickPrettyWomenTab(){
+
+        driver.findElement(Locators.LINK_SEARCH).click();
+    }
+
 }

@@ -9,11 +9,11 @@ public class RegistrationsTests extends BaseUI{
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();
         mainPage.completeSecondPartOfRegistartion();
-//        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-//        if(!driver.findElement(Locators.LINK_SEARCH).isDisplayed()){
-//            checkboxConfirmation.click();
-//        }else{
-//            Assert.fail("Checkbox is already selected");
-//        }
+        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+        if(driver.findElement(Locators.LINK_SEARCH).isDisplayed()){
+            checkboxConfirmation.click();
+        }else{
+            Assert.fail("Checkbox is already selected");
+        }
     }
 }

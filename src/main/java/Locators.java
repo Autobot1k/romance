@@ -54,4 +54,9 @@ public class Locators {
     public static final By DROP_DOWN_LIST_AGE_MAX = By.cssSelector("#age_max");
     public static final By SEARCH_CLICK = By.cssSelector("#main_search_button_user_advanced");
 
+    //Photos page
+    public static final By PHOTO_TAB = By.xpath("//a[@href='https://romanceabroad.com/media/photo']");
+    public static final By VIDEO_TAB = By.xpath("//a[@href='https://romanceabroad.com/media/video']");
+    public static final By ALBUMS_TAB = By.xpath("//a[@href='https://romanceabroad.com/media/albums']");
+
 }
