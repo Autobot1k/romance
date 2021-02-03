@@ -7,7 +7,7 @@ public class BlogTest extends BaseUI{
     public void testBlog(){
         String blogLink = blogPage.verifyBlogLinkIsDisplayed();
         Assert.assertEquals(blogLink, Data.expectedUrlBlog);
-        driver.navigate().to(mainUrl);
+        driver.navigate().to(Data.mainUrl);
     }
 
 

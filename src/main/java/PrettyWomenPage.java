@@ -17,6 +17,11 @@ public class PrettyWomenPage extends BaseActions {
         driver.findElement(Locators.SEARCH_CLICK).click();
     }
 
+//    public WebElement dropDownList(){
+//        WebElement dropDownListelement = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
+//        return dropDownListelement;
+//    }
+
 
 
 

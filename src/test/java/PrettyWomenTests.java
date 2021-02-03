@@ -43,11 +43,12 @@ public class PrettyWomenTests extends BaseUI{
         prettyWomenPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_AGE_MIN, 2);
         prettyWomenPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_AGE_MAX, 12);
         prettyWomenPage.clickSearchPrettyWomen();
+
         prettyWomenPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, 2);
 
-//        WebElement dropDownList = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
-//        prettyWomenPage.navigateToDropDownListSortBy(dropDownList, Data.sortBY_Views);
-//        prettyWomenPage.getDropDownListByText(dropDownListSortBy, Data.sortBY_Views);
+//        prettyWomenPage.getDropDownListByText(prettyWomenPage.dropDownList(), Data.sortBY_Views);
+
+
 
     }
 
