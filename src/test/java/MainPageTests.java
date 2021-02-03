@@ -1,15 +1,38 @@
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class MainTests extends BaseUI {
+public class MainPageTests extends BaseUI {
+
+    @Test
+    public void testRegistration(){
+        mainPage.clickJoinButton();
+        mainPage.completeFirstPartOfRegistration();
+        mainPage.completeSecondPartOfRegistration();
+        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+        if(driver.findElement(Locators.CAPTCHA_TITLE).isDisplayed()){
+            checkboxConfirmation.click();
+        }else{
+            Assert.fail("Checkbox is already selected");
+        }
+    }
+
+
 
     @Test
     public void testVideoWebElement () throws InterruptedException {
         Thread.sleep(5000);
-        WebElement ele = driver.findElement(Locators.FIND_YOU_TUBE_VIDEO);
-        driver.switchTo().frame(ele);
+        WebElement element = driver.findElement(Locators.FIND_YOU_TUBE_VIDEO);
+        driver.switchTo().frame(element);
         driver.findElement(Locators.CLICK_YOU_TUBE_VIDEO).click();
+
+    }
+
+    @Test
+    public void IframesMainPage(){
+        int numbersOfIframes = mainPage.verifyIframeSizeFromMainPage();
+        Assert.assertTrue(numbersOfIframes > 0);
 
     }
 

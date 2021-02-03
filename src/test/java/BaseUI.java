@@ -12,18 +12,16 @@ import org.testng.asserts.SoftAssert;
 import java.lang.reflect.Method;
 
 public class BaseUI {
-    String currentUrlSearch;
-//    String currentTitleSearch;
+    String currentUrlPrettyWomen;
+    String currentUrl;
     WebDriver driver;
     WebDriverWait wait;
-    String mainUrl = "https://romanceabroad.com/";
     MainPage mainPage;
-    SearchPage searchPage;
-    RegistrationPage registrationPage;
+    PrettyWomenPage prettyWomenPage;
     MediaPage mediaPage;
+    BlogPage blogPage;
     SoftAssert softAssert = new SoftAssert();
-//    String mainUrl = "https://www.computerhope.com/jargon/r/radiobut.htm";
-//    String mainUrl = "https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/";
+
 
     @BeforeMethod
     @Parameters("browser")
@@ -77,11 +75,11 @@ public class BaseUI {
 
         wait = new WebDriverWait(driver, 20);
         mainPage = new MainPage(driver, wait);
-        searchPage = new SearchPage(driver, wait);
-        registrationPage = new RegistrationPage(driver,wait);
+        prettyWomenPage = new PrettyWomenPage(driver, wait);
         mediaPage = new MediaPage(driver, wait);
+        blogPage = new BlogPage(driver, wait);
         driver.manage().window().maximize();
-        driver.get(mainUrl);
+        driver.get(Data.mainUrl);
     }
 
     @AfterMethod

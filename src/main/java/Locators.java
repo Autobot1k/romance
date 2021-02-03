@@ -5,8 +5,8 @@ public class Locators {
     //MainPage
     public static final By FIND_YOU_TUBE_VIDEO = (By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
     public static final By CLICK_YOU_TUBE_VIDEO = (By.xpath("//button[@class='ytp-large-play-button ytp-button']"));
-    public static final By MAIN_PAGE_LIST = (By.xpath("//ul[@class='navbar-nav']//li"));
-
+    public static final By TABS_OF_MAIN_PAGE = (By.xpath("//ul[@class='navbar-nav']//li"));
+    public static final By CAPTCHA_TITLE = (By.xpath("//label[@for='captcha']"));
 
 
     //Gifts
@@ -32,9 +32,12 @@ public class Locators {
 
     //How we work tab
     public static final By LINK_HOW_WE_WORK = By.xpath(" //a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By HOW_WE_WORK_PAGE_TITLE = (By.xpath("//h1"));
 
     //Pretty Woman tab
-    public static final By LINK_SEARCH = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
+    public static final By LINK_PRETTY_WOMEN = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
+    public static final By PRETTY_WOMEN_PAGE_TITLE = (By.xpath("//h1"));
+    public static final By PRETTY_WOMEN_IMAGES = (By.xpath("//a[@class='g-pic-border g-rounded']"));
 
     //Photos tab
     public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");

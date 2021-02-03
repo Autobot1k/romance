@@ -110,35 +110,40 @@ public class Conditions extends BaseUI {
 
     @Test
     public void test7() {
+        String info;
         String actualTitle;
         String actualUrlPrettyWomen;
-        String expectedUrlPrettyWomen = "https://romanceabroad.com/users/search";
-        String expectedTitleHowWeWork = "Ukrainian women for marriage";
-        String expectedTitlePrettyWomen = "Single Ukrainian women online";
 
-        List<WebElement> links = driver.findElements(Locators.MAIN_PAGE_LIST);
+
+        List<WebElement> links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
         System.out.println(links.size());
 
         for (int i = 0; i < links.size(); i++) {
 
-            String info = links.get(i).getText();
+            info = links.get(i).getText();
             System.out.println(info);
-            links.get(i).click();
+            //links.get(i).click();
+            mainPage.ajaxClick(links.get(i));
 
             if (info.contains("WORK")) {
-                actualTitle = driver.findElement(By.xpath("//h1")).getText();
-                Assert.assertEquals(actualTitle, expectedTitleHowWeWork);
+                actualTitle = driver.findElement(Locators.HOW_WE_WORK_PAGE_TITLE).getText();
+                Assert.assertEquals(actualTitle, Data.expectedTitleHowWeWork);
             }
             if (info.contains("PRETTY WOMEN")) {
-                actualTitle = driver.findElement(By.xpath("//h1")).getText();
+                actualTitle = driver.findElement(Locators.PRETTY_WOMEN_PAGE_TITLE).getText();
                 actualUrlPrettyWomen = driver.getCurrentUrl();
-                Assert.assertEquals(actualTitle, expectedTitlePrettyWomen);
-                Assert.assertEquals(actualUrlPrettyWomen, expectedUrlPrettyWomen);
-                driver.findElement(By.xpath("//a[@class='g-pic-border g-rounded']")).isDisplayed();
+                Assert.assertEquals(actualTitle, Data.expectedTitlePrettyWomen);
+                Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
+                driver.findElement(Locators.PRETTY_WOMEN_IMAGES).isDisplayed();
+                if (actualUrlPrettyWomen.contains("#")) {
+                    Assert.fail("It contains restricted #");
+                } else {
+                    System.out.println("Everything is good!");
+                }
             }
 
             driver.get(Data.MAIN_URL);
-            links = driver.findElements(Locators.MAIN_PAGE_LIST);
+            links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
 
         }
 
@@ -166,7 +171,7 @@ public class Conditions extends BaseUI {
         List<WebElement> gifts = driver.findElements(By.xpath("//div[@class='title-block pt5']"));
         List<String> options = new ArrayList<>(Arrays.asList("Spa", "Chocolate and fruits", "Teddy bear", "Flower basket", "Sushi sets", "TOURS TO UKRAINE"));
 
-        System.out.println(driver.findElements(Locators.MAIN_PAGE_LIST).size());
+        System.out.println(driver.findElements(Locators.TABS_OF_MAIN_PAGE).size());
         giftsLink.click();
 
         System.out.println(driver.findElements(By.xpath("//div[@class='title-block pt5']")).size());
@@ -178,16 +183,16 @@ public class Conditions extends BaseUI {
             gifts.get(i).click();
 
             if (info.contains(options.get(i)))
-            
-                actualUrlGifts = driver.getCurrentUrl();
-                Assert.assertEquals(actualUrlGifts, expectedUrlGifts);
 
-            }
+                actualUrlGifts = driver.getCurrentUrl();
+            Assert.assertEquals(actualUrlGifts, expectedUrlGifts);
+
         }
     }
+
 //
 
-//    @Test
+    //    @Test
 //    public void test10() {
 //        List<WebElement> list = driver.findElements(By.xpath("//ul//li"));
 //        for (int i = 0; i < list.size(); i++) {
@@ -237,5 +242,17 @@ public class Conditions extends BaseUI {
 //
 //        }
 //    }
+
+
+    @Test
+    public void test14() {
+//        By linkJoinToday = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
+        mainPage.ajaXClick(Locators.TABS_OF_MAIN_PAGE, 4);
+//        mainPage.performClick(Locators.TABS_OF_MAIN_PAGE, 4);
+//        mainPage.scrollToTheBottomOfThePage();
+//        WebElement element;
+//        mainPage.ajaxScroll(element = driver.findElement(By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']")));
+    }
+}
 //
 //}

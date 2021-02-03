@@ -2,12 +2,15 @@ public class Data {
 
     //Main
     public static final String MAIN_URL = "https://romanceabroad.com";
+    public static final String mainUrl = "https://romanceabroad.com/";
 
+    //How We Work
+    public static final String expectedTitleHowWeWork = "Ukrainian women for marriage";
 
 
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
-    public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
+
 
     //Registration
     public static final String emailInput = "AAA@gmail.com";
@@ -19,7 +22,12 @@ public class Data {
 
     //Search
     public static final String sortBY_Views = "Views";
+    public static final String expectedTitlePrettyWomen = "Single Ukrainian women online";
+    public static final String expectedUrlPrettyWomen = "https://romanceabroad.com/users/search";
 
+
+    //Blog
+    public static final String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
 
 
     public static final String expectedTabTitle = "TOUR TO UKRAINE";

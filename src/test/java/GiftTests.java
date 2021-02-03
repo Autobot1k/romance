@@ -7,9 +7,9 @@ public class GiftTests extends BaseUI {
     @Test
     public void testGiftsPage() {
         driver.findElement(Locators.LINK_GIFTS).click();
-        currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, Data.expectedUrlGifts);
+        currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+        Assert.assertEquals(currentUrl, Data.expectedUrlGifts);
     }
 
 }

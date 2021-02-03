@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +16,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_REGISTRATION).click();
     }
 
-    public void completeFirstPartOfRegistartion(){
+    public void completeFirstPartOfRegistration(){
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(Locators.EMAIL_FIELD).sendKeys(Data.emailInput);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
@@ -24,7 +25,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
-    public void completeSecondPartOfRegistartion(){
+    public void completeSecondPartOfRegistration(){
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(generateNewNumber(Data.usernameInput, 10));
         driver.findElement(Locators.SELECT_DAY_FIELD).click();
         driver.findElement(Locators.PICK_A_DAY).click();
@@ -35,12 +36,16 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.PHONE_FIELD).sendKeys(Data.phoneInput);
         driver.findElement(Locators.LOCATION_FIELD).clear();
         driver.findElement(Locators.LOCATION_FIELD).sendKeys(Data.locationInput);
-
-
-        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+//        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
 //        boolean selectedCheckbox = checkboxConfirmation.isSelected();
-        System.out.println(Data.printCheckboxConf);
-        checkboxConfirmation.click();
+//        System.out.println(Data.printCheckboxConf);
+//        checkboxConfirmation.click();
+    }
+
+    public int verifyIframeSizeFromMainPage(){
+        int size = driver.findElements(By.xpath("//iframe")).size();
+        System.out.println(size + " iframe number");
+        return size;
     }
 
 }
