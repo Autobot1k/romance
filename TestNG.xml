@@ -8,7 +8,7 @@
 
         <classes>
 
-            <class name ="Conditions"/>
+            <class name ="MainPageTests"/>
 
         </classes>
 
@@ -20,7 +20,7 @@
 
         <classes>
 
-            <class name ="Conditions"/>
+            <class name ="MainPageTests"/>
 
         </classes>
 
@@ -32,7 +32,7 @@
 
         <classes>
 
-            <class name ="Conditions"/>
+            <class name ="MainPageTests"/>
 
         </classes>
 

@@ -1,6 +1,9 @@
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 
 public class MainPageTests extends BaseUI {
@@ -35,6 +38,29 @@ public class MainPageTests extends BaseUI {
         Assert.assertTrue(numbersOfIframes > 0);
 
     }
+
+    @Test
+    public void testLinksOnMainPage(){
+        mainPage.checkLinksOnWebPage("//a", "href");
+        mainPage.checkLinksOnWebPage("//img", "src");
+//        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+//        mainPage.checkLinksOnWebPage("//a", "href");
+//        mainPage.checkLinksOnWebPage("//img", "src");
+    }
+
+    @Test
+    public void testAjaxSendKeys(){
+        mainPage.clickJoinButton();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        mainPage.ajaxSendKeys(driver.findElement(Locators.EMAIL_FIELD), "aaa@gmail.com" );
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
+        mainPage.ajaxSendKeys(driver.findElement(Locators.PASSWORD_FIELD), "123456789" );
+        mainPage.clickButtonNext();
+
+    }
+
+
+
 
 
 //    @Test
@@ -81,6 +107,44 @@ public class MainPageTests extends BaseUI {
 //    }
 
 }
+
+
+// 10 xPaths with 2 attributes:
+
+//1. For "Home" web-element: //a[@href='#'][@class='nav-link']
+//2. For YouTube play button web-element: //button[@class='ytp-large-play-button ytp-button'][@aria-label='Play']
+//3. For "Request Tour Info" web-element: //a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc'][@target='_blank']
+//4. For Picture from carousel on MainPage web-element: //img[@class=' img-fluid'][@src='/img/portfolio/slideimg12.jpg']
+//5. For "Join Today" web-element: //a[@href='#'][@data-action='show-registration-block']
+//6. For "Facebook" web-element: //a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks'][@target='_blank']
+//7. For "Sign In" button after clicking "SIGN IN" link: //button[@class='btn btn-primary'][@type='submit']
+//8. For "Login" web-element on Blog page: //a[@id='ajax_login_link'][@href='javascript:void(0);']
+//9. For "Find People" web-element on Blog page: //button[@id='main_search_button_user_line'][@class='btn btn-primary btn-white']
+//10. For "Privacy" web-element on Blog page: //a[@id='footer_footer-menu-policy-item_footer-menu-privacy-item'][@href='https://romanceabroad.com/content/view/privacy-and-security']
+
+
+// 10 xPaths with 2 parents:
+
+//1. For "How We Work" web-element: //li[@class='nav-item']//a[@href='https://romanceabroad.com/content/view/how-it-works']
+//2. For "Join for free now" web-element: //div[@class='continue-block']//button[@id='show-registration-block']
+//3. For "Search" web-element on "Tour to Ukraine" page: //div[@class='continue-block']//button[@id='show-registration-block']
+//4. For "Categories" web-element on "Tour to Ukraine" page: //div[@class='input-group input-group no-padding-left']//span[@id='categories']
+//5. For "Spa" web-element on "Gifts" page: //div[@class='info']//a[@href='https://romanceabroad.com/store/sweets/2-massage_spa']
+//6. For "Quick view" web-element for "Teddy Bear" on "Gifts" page: //div[@id='product_quick_view_11']//input[@class='btn btn-primary']
+//7. For "Menu Item" web-element for on "Gifts" page: //div[@class='menu-item']//a[@class='uam-top link-open-menu btn-slide']
+//8. For "Register" link after clicking "SIGN IN" link: //div[@class='col-xs-12']//a[@href='javascript:;']
+//9. For "Heart Logo" web-element on "How we work" page: //div[@class='logo-mobile-version top-menu-item']//a[@href='https://romanceabroad.com/']
+//10. For "Advertising" web-element on "How we work" page: //div[@class='info-menu-inner']//a[@href='https://romanceabroad.com/content/view/advertising']
+
+
+
+
+
+
+
+
+
+
 
 
 // 10 xPaths:

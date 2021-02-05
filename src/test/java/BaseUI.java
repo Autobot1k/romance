@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
 public class BaseUI {
     String currentUrlPrettyWomen;
     String currentUrl;
+    String currentUrlMedia;
     WebDriver driver;
     WebDriverWait wait;
     MainPage mainPage;

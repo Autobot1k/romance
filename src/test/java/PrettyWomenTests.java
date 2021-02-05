@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class PrettyWomenTests extends BaseUI{
+public class PrettyWomenTests extends BaseUI {
 
     //Before Optimization
 
@@ -35,7 +35,7 @@ public class PrettyWomenTests extends BaseUI{
 
     //After Optimization
     @Test
-    public void prettyWomenPage(){
+    public void prettyWomenPage() {
         prettyWomenPage.clickPrettyWomenTab();
         currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
@@ -47,7 +47,6 @@ public class PrettyWomenTests extends BaseUI{
         prettyWomenPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, 2);
 
 //        prettyWomenPage.getDropDownListByText(prettyWomenPage.dropDownList(), Data.sortBY_Views);
-
 
 
     }
@@ -81,6 +80,19 @@ public class PrettyWomenTests extends BaseUI{
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         prettyWomenPage.getDropDownListByText(dropDownListSortBy, Data.sortBY_Views);
         softAssert.assertAll();
+    }
+
+
+    @Test
+    public void selectRandomDropDownList() {
+        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+        int sizeOfDropDownList = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_AGE_MAX);
+        System.out.println(sizeOfDropDownList);
+
+        for (int i = 0; i < sizeOfDropDownList; i++) {
+            prettyWomenPage.selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_AGE_MAX, "Age MAX");
+            prettyWomenPage.javaWaitSec(3);
+        }
     }
 
 }

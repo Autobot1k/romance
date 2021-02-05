@@ -26,6 +26,9 @@ public class Data {
     public static final String expectedUrlPrettyWomen = "https://romanceabroad.com/users/search";
 
 
+    //Photos
+    public static final String expectedUrlMedia = "https://romanceabroad.com/media/index";
+
     //Blog
     public static final String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
 

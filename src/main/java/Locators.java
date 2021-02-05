@@ -3,10 +3,12 @@ import org.openqa.selenium.By;
 public class Locators {
 
     //MainPage
-    public static final By FIND_YOU_TUBE_VIDEO = (By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
-    public static final By CLICK_YOU_TUBE_VIDEO = (By.xpath("//button[@class='ytp-large-play-button ytp-button']"));
-    public static final By TABS_OF_MAIN_PAGE = (By.xpath("//ul[@class='navbar-nav']//li"));
-    public static final By CAPTCHA_TITLE = (By.xpath("//label[@for='captcha']"));
+    public static final By FIND_YOU_TUBE_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By CLICK_YOU_TUBE_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+    public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
+    public static final By CAPTCHA_TITLE = By.xpath("//label[@for='captcha']");
+    public static final By PAGE_TITLE = By.xpath("//h1");
+
 
 
     //Gifts
@@ -17,7 +19,7 @@ public class Locators {
     public static final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
     public static final By EMAIL_FIELD = By.cssSelector("input#email");
     public static final By PASSWORD_FIELD = By.cssSelector("input#password");
-    public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
+    public static final By BUTTON_NEXT = By.xpath("//div[@class='col-xs-12']//button[@data-action='next-page'][text()='Next']");
     public static final By USERNAME_FIELD = By.cssSelector("#nickname");
     public static final By SELECT_DAY_FIELD = By.cssSelector("#daySelect");
     public static final By PICK_A_DAY = By.xpath("//li[@data-handler='selectDay']//a[text()='3']");
@@ -32,12 +34,12 @@ public class Locators {
 
     //How we work tab
     public static final By LINK_HOW_WE_WORK = By.xpath(" //a[@href='https://romanceabroad.com/content/view/how-it-works']");
-    public static final By HOW_WE_WORK_PAGE_TITLE = (By.xpath("//h1"));
+    public static final By HOW_WE_WORK_PAGE_TITLE = By.xpath("//h1");
 
     //Pretty Woman tab
     public static final By LINK_PRETTY_WOMEN = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
-    public static final By PRETTY_WOMEN_PAGE_TITLE = (By.xpath("//h1"));
-    public static final By PRETTY_WOMEN_IMAGES = (By.xpath("//a[@class='g-pic-border g-rounded']"));
+    public static final By PRETTY_WOMEN_PAGE_TITLE = By.xpath("//h1");
+    public static final By PRETTY_WOMEN_IMAGES = By.xpath("//a[@class='g-pic-border g-rounded']");
 
     //Photos tab
     public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");

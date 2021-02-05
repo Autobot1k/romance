@@ -25,6 +25,10 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
+    public void clickButtonNext(){
+        driver.findElement(Locators.BUTTON_NEXT).click();
+    }
+
     public void completeSecondPartOfRegistration(){
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(generateNewNumber(Data.usernameInput, 10));
         driver.findElement(Locators.SELECT_DAY_FIELD).click();

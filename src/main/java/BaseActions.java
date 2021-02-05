@@ -1,8 +1,5 @@
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -10,6 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import javax.swing.*;
+import java.math.BigInteger;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.security.SecureRandom;
+import java.util.List;
 
 public class BaseActions {
 
@@ -93,6 +95,109 @@ public class BaseActions {
     public void ajaxScroll(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    //explicit & implicit waits
+    public void javaWait(int ms) {
+        System.out.println("Parent!!!");
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void javaWaitSec(int sec) {
+        try {
+            Thread.sleep(sec * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //when regular send keys is not working and locator is correct
+    public void ajaxSendKeys(WebElement element, String text) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', '" + text + "')", element);
+    }
+
+    //generate random string
+    public static String generateRandomString() {
+        return new BigInteger(120, new SecureRandom()).toString(32);
+    }
+
+    //Method for random choice from drop down list
+    public void selectItemDropDownRandomOption(By locator, String dropDownName) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Select select = new Select(driver.findElement(locator));
+            select.selectByIndex((int) (Math.random() * (select.getOptions().size() - 1)) + 1);
+            System.out.println(dropDownName + ": " + select.getFirstSelectedOption().getText());
+        } catch (NoSuchElementException e) {
+        }
+    }
+
+    //attribute can be source, style, href, etc. -  anything we have inside the element
+    public void checkLinksOnWebPage(String typeElement, String attribute) {
+
+        List<WebElement> links = driver.findElements(By.xpath(typeElement));
+
+        System.out.println("I start taking attributes on page");
+
+        for (int i = 0; i < links.size(); i++) {
+            WebElement ele = links.get(i);
+            String url = ele.getAttribute(attribute);
+            verifyLinkActive(url);
+        }
+        System.out.println("Total links are " + links.size());
+    }
+
+    //Method for link verification
+    public void verifyLinkActive(String linkURL) {
+        try {
+            URL url = new URL(linkURL);
+            HttpURLConnection httpURLConnect = (HttpURLConnection) url.openConnection();
+            httpURLConnect.setConnectTimeout(3000);
+            httpURLConnect.connect();
+            if (httpURLConnect.getResponseCode() == 200) {
+                System.out.println(linkURL + " - " + httpURLConnect.getResponseMessage());
+            } else if (httpURLConnect.getResponseCode() >= 400 && httpURLConnect.getResponseCode() <= 504) {
+                System.out.println(linkURL + " - " + httpURLConnect.getResponseMessage() + " - " + httpURLConnect.getResponseCode());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public int getSizeDropDownList(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Select select = new Select(driver.findElement(locator));
+            return select.getOptions().size();
+
+        } catch (NoSuchElementException e) {
+            System.out.println("getSizeDropDownList error");
+        }
+        return 0;
+    }
+
+    public void clickValueOfList(By locator, String text) {
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i < elements.size(); i++) {
+            WebElement elementOfList = elements.get(i);
+            String value = elementOfList.getText();
+            if (value.contains(text)) {
+                elementOfList.click();
+
+            }
+        }
+    }
+
+    public String getAnyTitle() {
+        String title = driver.findElement(Locators.PAGE_TITLE).getText();
+        return title;
+    }
+
 
     public void getNavigateToBlogLink(By locator){
         driver.findElement(locator).click();
