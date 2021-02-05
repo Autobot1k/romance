@@ -64,4 +64,6 @@ public class Locators {
     public static final By VIDEO_TAB = By.xpath("//a[@href='https://romanceabroad.com/media/video']");
     public static final By ALBUMS_TAB = By.xpath("//a[@href='https://romanceabroad.com/media/albums']");
 
+    //Gifts page
+    public static final By FOOTER_MENU_LIST = By.xpath("//ul//li//a//div");
 }

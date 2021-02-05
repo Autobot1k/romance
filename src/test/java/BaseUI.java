@@ -18,6 +18,7 @@ public class BaseUI {
     WebDriver driver;
     WebDriverWait wait;
     MainPage mainPage;
+    GiftPage giftPage;
     PrettyWomenPage prettyWomenPage;
     MediaPage mediaPage;
     BlogPage blogPage;
@@ -78,6 +79,7 @@ public class BaseUI {
         mainPage = new MainPage(driver, wait);
         prettyWomenPage = new PrettyWomenPage(driver, wait);
         mediaPage = new MediaPage(driver, wait);
+        giftPage = new GiftPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);

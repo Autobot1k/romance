@@ -52,4 +52,8 @@ public class MainPage extends BaseActions {
         return size;
     }
 
+    public void clickGiftsLink(){
+        driver.findElement(Locators.LINK_GIFTS).click();
+    }
+
 }
