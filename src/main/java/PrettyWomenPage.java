@@ -9,12 +9,19 @@ public class PrettyWomenPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void clickPrettyWomenTab(){
-        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
-    }
 
     public void clickSearchPrettyWomen(){
         driver.findElement(Locators.SEARCH_CLICK).click();
+    }
+
+    public String actualTitlePrettyWomenPage(){
+        String actualTitlePrettyWomenPage = driver.findElement(Locators.PRETTY_WOMEN_PAGE_TITLE).getText();
+        return actualTitlePrettyWomenPage;
+    }
+
+    public WebElement dropDownListSortBy(){
+        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
+        return dropDownListSortBy;
     }
 
 //    public WebElement dropDownList(){

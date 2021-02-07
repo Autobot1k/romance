@@ -12,9 +12,11 @@ import org.testng.asserts.SoftAssert;
 import java.lang.reflect.Method;
 
 public class BaseUI {
+    String info;
     String currentUrlPrettyWomen;
     String currentUrl;
     String currentUrlMedia;
+    String actualUrlGifts;
     WebDriver driver;
     WebDriverWait wait;
     MainPage mainPage;
@@ -25,7 +27,7 @@ public class BaseUI {
     SoftAssert softAssert = new SoftAssert();
 
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
     @Parameters("browser")
 
     public void setup(@Optional("chrome") String browser, Method method){

@@ -2,38 +2,50 @@
 
 <suite name="TestSuite" parallel="none" >
 
-    <test name="IETestCases">
+<!--    <test name="IETestCases">-->
 
-        <parameter name="browser" value="ie"/>
+<!--        <parameter name="browser" value="ie"/>-->
 
-        <classes>
+<!--        <classes>-->
 
-            <class name ="MainPageTests"/>
+<!--            <class name ="MainPageTests"/>-->
 
-        </classes>
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
-    <test name="FirefoxTestCases">
+<!--    <test name="FirefoxTestCases">-->
 
-        <parameter name="browser" value="firefox"/>
+<!--        <parameter name="browser" value="firefox"/>-->
 
-        <classes>
+<!--        <classes>-->
 
-            <class name ="MainPageTests"/>
+<!--            <class name ="MainPageTests"/>-->
 
-        </classes>
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
     <test name="ChromeTestCases">
 
         <parameter name="browser" value="chrome"/>
 
+        <groups>
+            <run>
+                <exclude name="chrome"/>
+                <include name="user"/>
+                <include name="admin"/>
+            </run>
+        </groups>
+
         <classes>
-
-            <class name ="MainPageTests"/>
-
+            <class name ="PrettyWomenTests">
+                <methods>
+                    <exclude name=".*Web.*"/>
+                    <include name=".*Test.*"/>
+                    <include name=".*List.*"/>
+                </methods>
+            </class>
         </classes>
 
     </test>

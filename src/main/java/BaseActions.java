@@ -200,10 +200,6 @@ public class BaseActions {
     }
 
 
-    public void getNavigateToBlogLink(By locator){
-        driver.findElement(locator).click();
-    }
-
     public void navigateToDropDownListSortBy(WebElement element, String text){
         Select select = new Select(element);
         select.selectByVisibleText(text);

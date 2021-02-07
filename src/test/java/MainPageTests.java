@@ -3,44 +3,43 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 
 public class MainPageTests extends BaseUI {
 
     @Test
-    public void testRegistration(){
+    public void testRegistration() {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration();
         mainPage.completeSecondPartOfRegistration();
-        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-        if(driver.findElement(Locators.CAPTCHA_TITLE).isDisplayed()){
-            checkboxConfirmation.click();
-        }else{
+        if (mainPage.captchTitleIsDisplayed()) {
+            mainPage.clickCheckBoxConfirmation();
+        } else {
             Assert.fail("Checkbox is already selected");
         }
     }
 
 
-
     @Test
-    public void testVideoWebElement () throws InterruptedException {
+    public void testVideoWebElement() throws InterruptedException {
         Thread.sleep(5000);
-        WebElement element = driver.findElement(Locators.FIND_YOU_TUBE_VIDEO);
-        driver.switchTo().frame(element);
-        driver.findElement(Locators.CLICK_YOU_TUBE_VIDEO).click();
+        driver.switchTo().frame(mainPage.findVideoOnMainPage());
+        mainPage.clickVideoOnMainPage();
 
     }
 
     @Test
-    public void IframesMainPage(){
+    public void IframesMainPage() {
         int numbersOfIframes = mainPage.verifyIframeSizeFromMainPage();
         Assert.assertTrue(numbersOfIframes > 0);
 
     }
 
     @Test
-    public void testLinksOnMainPage(){
+    public void testLinksOnMainPage() {
         mainPage.checkLinksOnWebPage("//a", "href");
         mainPage.checkLinksOnWebPage("//img", "src");
 //        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
@@ -49,15 +48,30 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testAjaxSendKeys(){
+    public void testAjaxSendKeys() {
         mainPage.clickJoinButton();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        mainPage.ajaxSendKeys(driver.findElement(Locators.EMAIL_FIELD), "aaa@gmail.com" );
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
-        mainPage.ajaxSendKeys(driver.findElement(Locators.PASSWORD_FIELD), "123456789" );
+        mainPage.ajaxSendKeys(mainPage.emailField(), "aaa@gmail.com");
+        wait.until(ExpectedConditions.visibilityOf(mainPage.passwordField()));
+        mainPage.ajaxSendKeys(mainPage.passwordField(), "123456789");
         mainPage.clickButtonNext();
+    }
+
+    @Test
+    public void smokeTestOfMainPage() {
+        int tabs = mainPage.getMainTabs().size();
+        System.out.println(tabs);
+        for (int i = 0; i < tabs; i++) {
+            info = mainPage.getMainTabs().get(i).getText();
+            System.out.println(info);
+            mainPage.getMainTabs().get(i).click();
+            driver.get(Data.mainUrl);
+            mainPage.getMainTabs();
+
+        }
 
     }
+}
 
 
 
@@ -106,7 +120,7 @@ public class MainPageTests extends BaseUI {
 //        linkSignIn.click();
 //    }
 
-}
+
 
 
 // 10 xPaths with 2 attributes:

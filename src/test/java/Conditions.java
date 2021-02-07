@@ -111,9 +111,7 @@ public class Conditions extends BaseUI {
     @Test
     public void test7() {
         String info;
-        String actualTitle;
         String actualUrlPrettyWomen;
-
 
         List<WebElement> links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
         System.out.println(links.size());
@@ -126,13 +124,12 @@ public class Conditions extends BaseUI {
             mainPage.ajaxClick(links.get(i));
 
             if (info.contains("WORK")) {
-                actualTitle = driver.findElement(Locators.HOW_WE_WORK_PAGE_TITLE).getText();
-                Assert.assertEquals(actualTitle, Data.expectedTitleHowWeWork);
+                Assert.assertEquals(mainPage.actualTitleHowWeWork(), Data.expectedTitleHowWeWork);
             }
             if (info.contains("PRETTY WOMEN")) {
-                actualTitle = driver.findElement(Locators.PRETTY_WOMEN_PAGE_TITLE).getText();
+
                 actualUrlPrettyWomen = driver.getCurrentUrl();
-                Assert.assertEquals(actualTitle, Data.expectedTitlePrettyWomen);
+                Assert.assertEquals(prettyWomenPage.actualTitlePrettyWomenPage(), Data.expectedTitlePrettyWomen);
                 Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
                 driver.findElement(Locators.PRETTY_WOMEN_IMAGES).isDisplayed();
                 if (actualUrlPrettyWomen.contains("#")) {
@@ -163,32 +160,7 @@ public class Conditions extends BaseUI {
 //    }
 //
 //
-    @Test
-    public void test9() {
-        String actualUrlGifts = null;
-        String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
-        WebElement giftsLink = driver.findElement(Locators.LINK_GIFTS);
-        List<WebElement> gifts = driver.findElements(By.xpath("//div[@class='title-block pt5']"));
-        List<String> options = new ArrayList<>(Arrays.asList("Spa", "Chocolate and fruits", "Teddy bear", "Flower basket", "Sushi sets", "TOURS TO UKRAINE"));
 
-        System.out.println(driver.findElements(Locators.TABS_OF_MAIN_PAGE).size());
-        giftsLink.click();
-
-        System.out.println(driver.findElements(By.xpath("//div[@class='title-block pt5']")).size());
-
-        for (int i = 0; i < gifts.size(); i++) {
-
-            String info = gifts.get(i).getText();
-            System.out.println(info);
-            gifts.get(i).click();
-
-            if (info.contains(options.get(i)))
-
-                actualUrlGifts = driver.getCurrentUrl();
-            Assert.assertEquals(actualUrlGifts, expectedUrlGifts);
-
-        }
-    }
 
 //
 

@@ -7,6 +7,10 @@ import org.testng.asserts.SoftAssert;
 
 public class PrettyWomenTests extends BaseUI {
 
+    public static final boolean testCase1 = true;
+    public static final boolean testCase2 = true;
+    public static final boolean testCase3 = false;
+
     //Before Optimization
 
 //    @Test
@@ -34,9 +38,9 @@ public class PrettyWomenTests extends BaseUI {
 //
 
     //After Optimization
-    @Test
-    public void prettyWomenPage() {
-        prettyWomenPage.clickPrettyWomenTab();
+    @Test(priority = 1, enabled = testCase1, groups = {"user", "admin"})
+    public void prettyWomenPageTestCase1() {
+        mainPage.clickPrettyWomenTab();
         currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
         Assert.assertEquals(currentUrl, Data.expectedUrlPrettyWomen);
@@ -69,23 +73,22 @@ public class PrettyWomenTests extends BaseUI {
 //        }
 //    }
 
-    @Test
-    public void testPrettyWomenPage() {
-        Assert.assertTrue(driver.findElement(Locators.LINK_PRETTY_WOMEN).isDisplayed(), "Element is not displayed");
-        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+    @Test(priority = 2, enabled = testCase2, groups = {"user", "admin"})
+    public void prettyWomenWebPageCase2() {
+        Assert.assertTrue(mainPage.prettyWomenTabIsDisplayed(), "Element is not displayed");
+        mainPage.clickPrettyWomenTab();
         currentUrlPrettyWomen = driver.getCurrentUrl();
         System.out.println(currentUrlPrettyWomen);
         softAssert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen, "Element is not displayed");
         softAssert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen, "Element is not displayed");
-        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
-        prettyWomenPage.getDropDownListByText(dropDownListSortBy, Data.sortBY_Views);
+        prettyWomenPage.getDropDownListByText(prettyWomenPage.dropDownListSortBy(), Data.sortBY_Views);
         softAssert.assertAll();
     }
 
 
-    @Test
-    public void selectRandomDropDownList() {
-        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+    @Test(priority = 3, enabled = testCase3, groups = {"admin", "user", "chrome"})
+    public void selectRandomDropDownListCase3() {
+        mainPage.clickPrettyWomenTab();
         int sizeOfDropDownList = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_AGE_MAX);
         System.out.println(sizeOfDropDownList);
 

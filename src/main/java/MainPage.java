@@ -1,12 +1,18 @@
+import jdk.internal.icu.text.UnicodeSet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MainPage extends BaseActions {
+
+
+
+    String currentUrlBlog;
 
     public MainPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
@@ -55,5 +61,63 @@ public class MainPage extends BaseActions {
     public void clickGiftsLink(){
         driver.findElement(Locators.LINK_GIFTS).click();
     }
+
+    public void getNavigateToBlogLink(By locator){
+        driver.findElement(locator).click();
+    }
+    public String verifyBlogLinkIsDisplayed(){
+        getNavigateToBlogLink(Locators.LINK_BLOG);
+        currentUrlBlog = driver.getCurrentUrl();
+        return currentUrlBlog;
+    }
+
+    public String actualTitleHowWeWork(){
+        String actualTitleHowWEWork = driver.findElement(Locators.HOW_WE_WORK_PAGE_TITLE).getText();
+        return actualTitleHowWEWork;
+    }
+
+    public boolean prettyWomenTabIsDisplayed(){
+        boolean prettyWomenTabIsDisplayed = driver.findElement(Locators.LINK_PRETTY_WOMEN).isDisplayed();
+        return prettyWomenTabIsDisplayed;
+    }
+
+    public void clickPrettyWomenTab(){
+        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+    }
+
+    public List<WebElement> getMainTabs(){
+        List<WebElement> mainTabs = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
+        return mainTabs;
+    }
+
+    public WebElement passwordField(){
+        WebElement passwordField = driver.findElement(Locators.PASSWORD_FIELD);
+        return passwordField;
+    }
+
+    public WebElement emailField(){
+        WebElement emailField = driver.findElement(Locators.EMAIL_FIELD);
+        return emailField;
+    }
+
+    public WebElement findVideoOnMainPage(){
+        WebElement videoOnMainPage = driver.findElement(Locators.FIND_YOU_TUBE_VIDEO);
+        return videoOnMainPage;
+    }
+
+    public void clickVideoOnMainPage(){
+        driver.findElement(Locators.CLICK_YOU_TUBE_VIDEO).click();
+    }
+
+    public void clickCheckBoxConfirmation(){
+        driver.findElement(Locators.CHECKBOX_CONFIRMATION).click();
+    }
+
+    public boolean captchTitleIsDisplayed(){
+        boolean captchTitleIsDisplayed = driver.findElement(Locators.CAPTCHA_TITLE).isDisplayed();
+        return captchTitleIsDisplayed;
+    }
+
+
 
 }

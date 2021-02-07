@@ -5,7 +5,7 @@ public class Locators {
     //MainPage
     public static final By FIND_YOU_TUBE_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By CLICK_YOU_TUBE_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
-    public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
+    public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li//a");
     public static final By CAPTCHA_TITLE = By.xpath("//label[@for='captcha']");
     public static final By PAGE_TITLE = By.xpath("//h1");
 
@@ -66,4 +66,6 @@ public class Locators {
 
     //Gifts page
     public static final By FOOTER_MENU_LIST = By.xpath("//ul//li//a//div");
+    public static final By GIFTS_TITLES = By.xpath("//div[@class='title-block pt5']");
+
 }
