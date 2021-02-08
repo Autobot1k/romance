@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +5,6 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 
 public class GiftTests extends BaseUI {
 
@@ -19,12 +17,12 @@ public class GiftTests extends BaseUI {
     }
 
 
-    //It actually work, but I guess have to use try/catch for invisible element "Mobile" from the list. Need better understanding for that
     @Test
     public void testValueOfTheListInFooterMenuGiftsPage() {
         mainPage.clickGiftsLink();
         giftPage.javaWaitSec(3);
         giftPage.clickValueOfList(Locators.FOOTER_MENU_LIST, "News");
+        Assert.assertTrue(giftPage.titleContainsNews());
 
     }
 

@@ -7,4 +7,8 @@ public class GiftPage extends BaseActions{
         super(driver, wait);
     }
 
+    public boolean titleContainsNews(){
+        boolean titleContainsNews = driver.findElement(Locators.TITLE_OF_NEWS_PAGE).getText().contains("News");
+        return titleContainsNews;
+    }
 }

@@ -21,6 +21,7 @@ public class BaseUI {
     WebDriverWait wait;
     MainPage mainPage;
     GiftPage giftPage;
+    ContactUsPage contactUsPage;
     PrettyWomenPage prettyWomenPage;
     MediaPage mediaPage;
     BlogPage blogPage;
@@ -83,6 +84,7 @@ public class BaseUI {
         mediaPage = new MediaPage(driver, wait);
         giftPage = new GiftPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
+        contactUsPage = new ContactUsPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
     }

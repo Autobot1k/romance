@@ -1,10 +1,7 @@
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 
@@ -13,8 +10,9 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testRegistration() {
         mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration();
-        mainPage.completeSecondPartOfRegistration();
+        mainPage.completeFirstPartOfRegistration(Data.emailInput, Data.passwordInput);
+        mainPage.completeSecondPartOfRegistration(mainPage.generateNewNumber(Data.userNameInput, 10), Data.day,
+                Data.month, Data.year, Data.phone, Data.location, Data.specific_location);
         if (mainPage.captchTitleIsDisplayed()) {
             mainPage.clickCheckBoxConfirmation();
         } else {

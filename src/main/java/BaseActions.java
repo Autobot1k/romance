@@ -23,6 +23,17 @@ public class BaseActions {
         this.wait = wait;
     }
 
+    public void clickValueOfLists(By locator, String text){
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i < elements.size(); i++) {
+            WebElement elementOfList = elements.get(i);
+            String value = elementOfList.getText();
+            if(value.contains(text)){
+                elementOfList.click();
+            }
+        }
+    }
+
     public static String generateNewNumber(String name, int length){
         return name + RandomStringUtils.random(length, "1453474385717");
     }
@@ -189,6 +200,8 @@ public class BaseActions {
             String value = elementOfList.getText();
             if (value.contains(text)) {
                 elementOfList.click();
+                break;
+//                elements = driver.findElements(locator);
 
             }
         }

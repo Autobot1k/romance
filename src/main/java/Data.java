@@ -15,15 +15,25 @@ public class Data {
     //Registration
     public static final String emailInput = "AAA@gmail.com";
     public static final String passwordInput = "AAAAAAAAAAA";
-    public static final String usernameInput = "JAMES";
-    public static final String phoneInput = "23495732475273";
-    public static final String locationInput = "San Diego";
+    public static final String userNameInput = "JAMES";
+    public static final String day = "10";
+    public static final String month = "Jun";
+    public static final String year = "1990";
+    public static final String phone = "23495732475273";
+    public static final String location = "San Diego";
+    public static final String specific_location = "San Diego, California, United States";
     public static final String printCheckboxConf = " !!!!!!!!!";
 
     //Search
     public static final String sortBY_Views = "Views";
     public static final String expectedTitlePrettyWomen = "Single Ukrainian women online";
     public static final String expectedUrlPrettyWomen = "https://romanceabroad.com/users/search";
+
+    //Contact us
+    public static final String reason = "Technical support";
+    public static final String subject = "Registration";
+    public static final String message = "Hello";
+    public static final String contactUs = "Contact us";
 
 
     //Photos
