@@ -45,6 +45,7 @@ public class Locators {
     public static final By SUBJECT_FIELD = By.xpath("//input[@name='subject']");
     public static final By MESSAGE_FIELD = By.xpath("//textarea[@name='message']");
     public static final By BUTTON_SEND = By.xpath("//input[@name='btn_save']");
+    public static final By TITLE_OF_CONTACT_US_PAGE = By.xpath("//h1");
 
 
     //Pretty Woman tab

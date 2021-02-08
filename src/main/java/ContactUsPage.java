@@ -22,4 +22,9 @@ public class ContactUsPage extends BaseActions {
 
         driver.findElement(Locators.BUTTON_SEND).click();
     }
+
+    public boolean titleContainsContactAdministrator(){
+        boolean titleContainsContactAdministrator = driver.findElement(Locators.TITLE_OF_CONTACT_US_PAGE).getText().contains("Contact administrator");
+        return titleContainsContactAdministrator;
+    }
 }
