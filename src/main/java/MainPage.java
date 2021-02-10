@@ -23,6 +23,7 @@ public class MainPage extends BaseActions {
 
     public void completeFirstPartOfRegistration(String email, String password){
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_FIELD)));
         driver.findElement(Locators.EMAIL_FIELD).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
         driver.findElement(Locators.PASSWORD_FIELD).sendKeys(password);
@@ -50,8 +51,9 @@ public class MainPage extends BaseActions {
 
         driver.findElement(Locators.LOCATION_FIELD).clear();
         driver.findElement(Locators.LOCATION_FIELD).sendKeys(location);
+        clickValueOfLists(Locators.LIST_OF_SPECIFIC_LOCATIONS, specific_location);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.CHECKBOX_CONFIRMATION)));
 
-        clickValueOfLists(Locators.LIST_OF_SPECIFIC_LOCATIONS, specific_location );
 //        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
 //        boolean selectedCheckbox = checkboxConfirmation.isSelected();
 //        System.out.println(Data.printCheckboxConf);

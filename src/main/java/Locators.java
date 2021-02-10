@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+    public static final By H1_TITLE = By.xpath("//h1");
+
     //MainPage
     public static final By FIND_YOU_TUBE_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By CLICK_YOU_TUBE_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
@@ -35,6 +37,7 @@ public class Locators {
 
     //How we work tab
     public static final By LINK_HOW_WE_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINKS_OF_ARTICLES = By.xpath("//div[@class='info-menu-inner']");
     public static final By HOW_WE_WORK_PAGE_TITLE = By.xpath("//h1");
 
     //Contact us page

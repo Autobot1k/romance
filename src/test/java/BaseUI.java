@@ -20,6 +20,7 @@ public class BaseUI {
     WebDriver driver;
     WebDriverWait wait;
     MainPage mainPage;
+    HowWeWorkPage howWeWorkPage;
     GiftPage giftPage;
     ContactUsPage contactUsPage;
     PrettyWomenPage prettyWomenPage;
@@ -80,6 +81,7 @@ public class BaseUI {
 
         wait = new WebDriverWait(driver, 20);
         mainPage = new MainPage(driver, wait);
+        howWeWorkPage = new HowWeWorkPage(driver, wait);
         prettyWomenPage = new PrettyWomenPage(driver, wait);
         mediaPage = new MediaPage(driver, wait);
         giftPage = new GiftPage(driver, wait);

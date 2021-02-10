@@ -1,74 +1,100 @@
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 
 public class MainPageTests extends BaseUI {
 
-    @Test
-    public void testRegistration() {
+    @DataProvider(name = "Registration")
+    public static Object[][] testRegistration() throws Exception {
+        ArrayList<Object[]> out = new ArrayList<>();
+        Files.readAllLines(Paths.get("Registration.csv")).forEach(s-> {
+
+            String[] data = s.split(",");
+            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]});
+
+        });
+
+        return out.toArray(new Object[out.size()][]);
+    }
+
+    @DataProvider(name = "Registration2")
+    public static Object[][] testRegistration2() throws Exception {
+        ArrayList<Object[]> out = new ArrayList<>();
+        Files.readAllLines(Paths.get("Registration.csv")).forEach(s-> {
+
+            String[] data = s.split(",");
+            out.add(new Object[]{data[0]});
+
+        });
+
+        return out.toArray(new Object[out.size()][]);
+    }
+
+    //Sometimes it doesn't click confirmation checkbox for the last testcase in every browser, but sometimes it works!
+    @Test(dataProvider = "Registration")
+    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city ,String location) {
         mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration(Data.emailInput, Data.passwordInput);
-        mainPage.completeSecondPartOfRegistration(mainPage.generateNewNumber(Data.userNameInput, 10), Data.day,
-                Data.month, Data.year, Data.phone, Data.location, Data.specific_location);
-        if (mainPage.captchTitleIsDisplayed()) {
-            mainPage.clickCheckBoxConfirmation();
-        } else {
-            Assert.fail("Checkbox is already selected");
-        }
+        mainPage.completeFirstPartOfRegistration(email, password);
+        mainPage.completeSecondPartOfRegistration(BaseActions.generateNewNumber(Data.userNameInput, 10), day,
+                month, year, phone, city, location);
+        mainPage.clickCheckBoxConfirmation();
     }
 
-
-    @Test
-    public void testVideoWebElement() throws InterruptedException {
-        Thread.sleep(5000);
-        driver.switchTo().frame(mainPage.findVideoOnMainPage());
-        mainPage.clickVideoOnMainPage();
-
-    }
-
-    @Test
-    public void IframesMainPage() {
-        int numbersOfIframes = mainPage.verifyIframeSizeFromMainPage();
-        Assert.assertTrue(numbersOfIframes > 0);
-
-    }
-
-    @Test
-    public void testLinksOnMainPage() {
-        mainPage.checkLinksOnWebPage("//a", "href");
-        mainPage.checkLinksOnWebPage("//img", "src");
-//        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+//    @Test()
+//    public void testVideoWebElement() throws InterruptedException {
+//        Thread.sleep(5000);
+//        driver.switchTo().frame(mainPage.findVideoOnMainPage());
+//        mainPage.clickVideoOnMainPage();
+//
+//    }
+//
+//    @Test
+//    public void IframesMainPage() {
+//        int numbersOfIframes = mainPage.verifyIframeSizeFromMainPage();
+//        Assert.assertTrue(numbersOfIframes > 0);
+//
+//    }
+//
+//    @Test
+//    public void testLinksOnMainPage() {
 //        mainPage.checkLinksOnWebPage("//a", "href");
 //        mainPage.checkLinksOnWebPage("//img", "src");
-    }
-
-    @Test
-    public void testAjaxSendKeys() {
-        mainPage.clickJoinButton();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        mainPage.ajaxSendKeys(mainPage.emailField(), "aaa@gmail.com");
-        wait.until(ExpectedConditions.visibilityOf(mainPage.passwordField()));
-        mainPage.ajaxSendKeys(mainPage.passwordField(), "123456789");
-        mainPage.clickButtonNext();
-    }
-
-    @Test
-    public void smokeTestOfMainPage() {
-        int tabs = mainPage.getMainTabs().size();
-        System.out.println(tabs);
-        for (int i = 0; i < tabs; i++) {
-            info = mainPage.getMainTabs().get(i).getText();
-            System.out.println(info);
-            mainPage.getMainTabs().get(i).click();
-            driver.get(Data.mainUrl);
-            mainPage.getMainTabs();
-
-        }
-
-    }
+////        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+////        mainPage.checkLinksOnWebPage("//a", "href");
+////        mainPage.checkLinksOnWebPage("//img", "src");
+//    }
+//
+//    @Test
+//    public void testAjaxSendKeys() {
+//        mainPage.clickJoinButton();
+//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        mainPage.ajaxSendKeys(mainPage.emailField(), "aaa@gmail.com");
+//        wait.until(ExpectedConditions.visibilityOf(mainPage.passwordField()));
+//        mainPage.ajaxSendKeys(mainPage.passwordField(), "123456789");
+//        mainPage.clickButtonNext();
+//    }
+//
+//    @Test
+//    public void smokeTestOfMainPage() {
+//        int tabs = mainPage.getMainTabs().size();
+//        System.out.println(tabs);
+//        for (int i = 0; i < tabs; i++) {
+//            info = mainPage.getMainTabs().get(i).getText();
+//            System.out.println(info);
+//            mainPage.getMainTabs().get(i).click();
+//            driver.get(Data.mainUrl);
+//            mainPage.getMainTabs();
+//
+//        }
+//
+//    }
 }
 
 

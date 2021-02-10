@@ -207,15 +207,14 @@ public class BaseActions {
         }
     }
 
-    public String getAnyTitle() {
-        String title = driver.findElement(Locators.PAGE_TITLE).getText();
-        return title;
-    }
-
-
     public void navigateToDropDownListSortBy(WebElement element, String text){
         Select select = new Select(element);
         select.selectByVisibleText(text);
+    }
+
+    public String getAnyTitle(){
+        String title = driver.findElement(Locators.H1_TITLE).getText();
+        return title;
     }
 
 
