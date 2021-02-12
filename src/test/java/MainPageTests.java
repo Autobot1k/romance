@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -9,42 +10,34 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 
-public class MainPageTests extends BaseUI {
+public class MainPageTests extends BaseUI{
 
-    @DataProvider(name = "Registration")
-    public static Object[][] testRegistration() throws Exception {
-        ArrayList<Object[]> out = new ArrayList<>();
-        Files.readAllLines(Paths.get("Registration.csv")).forEach(s-> {
 
-            String[] data = s.split(",");
-            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]});
+    //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!
 
-        });
-
-        return out.toArray(new Object[out.size()][]);
-    }
-
-    @DataProvider(name = "Registration2")
-    public static Object[][] testRegistration2() throws Exception {
-        ArrayList<Object[]> out = new ArrayList<>();
-        Files.readAllLines(Paths.get("Registration.csv")).forEach(s-> {
-
-            String[] data = s.split(",");
-            out.add(new Object[]{data[0]});
-
-        });
-
-        return out.toArray(new Object[out.size()][]);
-    }
-
-    //Sometimes it doesn't click confirmation checkbox for the last testcase in every browser, but sometimes it works!
-    @Test(dataProvider = "Registration")
+    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
     public void testRegistration(String email, String password, String day, String month, String year, String phone, String city ,String location) {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
+        mainPage.clickButtonNext();
         mainPage.completeSecondPartOfRegistration(BaseActions.generateNewNumber(Data.userNameInput, 10), day,
                 month, year, phone, city, location);
         mainPage.clickCheckBoxConfirmation();
+    }
+
+    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
+    public void testRegistration2(String email, String nickname, boolean requirement) {
+        System.out.println(email);
+        mainPage.clickJoinButton();
+        mainPage.completeFirstPartOfRegistration(email, Data.passwordInput);
+        if(!requirement) {
+            Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
+        }else{
+            mainPage.clickButtonNext();
+            mainPage.completeSecondPartOfRegistration(nickname, Data.day,
+                    Data.month, Data.year, Data.phone, Data.location, Data.specific_location);
+        }
+
     }
 
 //    @Test()

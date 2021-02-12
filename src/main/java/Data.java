@@ -14,8 +14,13 @@ public class Data {
 
     //Registration
     public static final String emailInput = "AAA@gmail.com";
+    public static final String email1 = "AAA@gmail.com";
+    public static final String email2 = "123aol.com";
+    public static final String email3 = "aaa@xyz.com";
     public static final String passwordInput = "AAAAAAAAAAA";
-    public static final String userNameInput = "JAMES";
+    public static final String userNameInput = "James";
+    public static final String nickname = BaseActions.generateNewNumber(Data.userNameInput, Data.secondPartOfName);
+    public static final int secondPartOfName = 1;
     public static final String day = "10";
     public static final String month = "Jun";
     public static final String year = "1990";

@@ -27,11 +27,10 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.EMAIL_FIELD).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
         driver.findElement(Locators.PASSWORD_FIELD).sendKeys(password);
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
-        driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
     public void clickButtonNext(){
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
