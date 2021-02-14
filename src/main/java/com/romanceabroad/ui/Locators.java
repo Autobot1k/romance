@@ -1,10 +1,12 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 
 public class Locators {
 
     public static final By H1_TITLE = By.xpath("//h1");
 
-    //MainPage
+    //com.romanceabroad.ui.MainPage
     public static final By FIND_YOU_TUBE_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By CLICK_YOU_TUBE_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
     public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li//a");
@@ -56,6 +58,8 @@ public class Locators {
     public static final By LINK_PRETTY_WOMEN = By.xpath("//a[@href ='https://romanceabroad.com/users/search']");
     public static final By PRETTY_WOMEN_PAGE_TITLE = By.xpath("//h1");
     public static final By PRETTY_WOMEN_IMAGES = By.xpath("//a[@class='g-pic-border g-rounded']");
+    public static final By LIST_OF_WOMEN = By.xpath("//div[@class='text-overflow']");
+
 
     //Photos tab
     public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");

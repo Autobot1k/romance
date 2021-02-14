@@ -8,7 +8,7 @@
 
 <!--        <classes>-->
 
-<!--            <class name ="MainPageTests"/>-->
+<!--            <class name ="com.romanceabroad.ui.MainPageTests"/>-->
 
 <!--        </classes>-->
 
@@ -20,7 +20,7 @@
 
 <!--        <classes>-->
 
-<!--            <class name ="MainPageTests"/>-->
+<!--            <class name ="com.romanceabroad.ui.MainPageTests"/>-->
 
 <!--        </classes>-->
 
@@ -39,7 +39,7 @@
 <!--        </groups>-->
 
 <!--        <classes>-->
-<!--            <class name ="PrettyWomenTests">-->
+<!--            <class name ="com.romanceabroad.ui.PrettyWomenTests">-->
 <!--                <methods>-->
 <!--                    <exclude name=".*Web.*"/>-->
 <!--                    <include name=".*Test.*"/>-->
@@ -56,7 +56,7 @@
 
         <classes>
 
-            <class name="MainPageTests"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
 
         </classes>
 

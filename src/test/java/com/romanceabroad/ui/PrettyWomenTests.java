@@ -1,5 +1,12 @@
+package com.romanceabroad.ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 
 public class PrettyWomenTests extends BaseUI {
@@ -7,29 +14,30 @@ public class PrettyWomenTests extends BaseUI {
     public static final boolean testCase1 = true;
     public static final boolean testCase2 = true;
     public static final boolean testCase3 = false;
+    public static final boolean testCase4 = true;
 
     //Before Optimization
 
 //    @Test
 //    public void prettyWomenPage(){
-//        driver.findElement(Locators.LINK_SEARCH).click();
+//        driver.findElement(com.romanceabroad.ui.Locators.LINK_SEARCH).click();
 //        currentUrlSearch = driver.getCurrentUrl();
 //        System.out.println(currentUrlSearch);
-//        Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
+//        Assert.assertEquals(currentUrlSearch, com.romanceabroad.ui.Data.expectedUrlSearch);
 //        try {
 //            Thread.sleep(3000);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-//        Select select1 = new Select(driver.findElement(Locators.DROP_DOWN_LIST_AGE_MIN));
+//        Select select1 = new Select(driver.findElement(com.romanceabroad.ui.Locators.DROP_DOWN_LIST_AGE_MIN));
 //        select1.selectByIndex(2);
-//        Select select2 = new Select(driver.findElement(Locators.DROP_DOWN_LIST_AGE_MAX));
+//        Select select2 = new Select(driver.findElement(com.romanceabroad.ui.Locators.DROP_DOWN_LIST_AGE_MAX));
 //        select2.selectByIndex(12);
 //
-//        driver.findElement(Locators.SEARCH_CLICK).click();
+//        driver.findElement(com.romanceabroad.ui.Locators.SEARCH_CLICK).click();
 //
-//        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
-//        searchPage.getDropDownListByText(dropDownListSortBy, Data.sortBY_Views);
+//        WebElement dropDownListSortBy = driver.findElement(com.romanceabroad.ui.Locators.DROP_DOWN_LIST_SORT_BY);
+//        searchPage.getDropDownListByText(dropDownListSortBy, com.romanceabroad.ui.Data.sortBY_Views);
 //
 //    }
 //
@@ -47,7 +55,7 @@ public class PrettyWomenTests extends BaseUI {
 
         prettyWomenPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, 2);
 
-//        prettyWomenPage.getDropDownListByText(prettyWomenPage.dropDownList(), Data.sortBY_Views);
+//        prettyWomenPage.getDropDownListByText(prettyWomenPage.dropDownList(), com.romanceabroad.ui.Data.sortBY_Views);
 
 
     }
@@ -95,4 +103,30 @@ public class PrettyWomenTests extends BaseUI {
         }
     }
 
+    @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase4, groups = {"admin", "user", "chrome"})
+    public void searchDifferentResults4(String minAge, String maxAge, String sort) {
+        int min = Integer.parseInt(minAge);
+        int max = Integer.parseInt(maxAge);
+        System.out.println(min);
+        System.out.println(max);
+
+        mainPage.clickPrettyWomenTab();
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_AGE_MIN), minAge);
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_AGE_MAX), maxAge);
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sort);
+        prettyWomenPage.clickSearchPrettyWomen();
+
+        int listOfUsers = prettyWomenPage.infoListAboutUser().size();
+        System.out.println(listOfUsers);
+        for (int i = 0; i < listOfUsers; i++) {
+            WebElement text = prettyWomenPage.infoListAboutUser().get(i);
+//            In my case testCase is working without ajax.Scroll and wait.until
+//            prettyWomenPage.ajaxScroll(text);
+//            wait.until(ExpectedConditions.visibilityOf(text));
+            String info = text.getText();
+            System.out.println(info);
+            prettyWomenPage.infoListAboutUser();
+
+        }
+    }
 }

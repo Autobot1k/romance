@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -70,7 +72,7 @@ public class Conditions extends BaseUI {
 //
 //    @Test
 //    public void test4() {
-//        WebElement tabSearch = driver.findElement(Locators.LINK_SEARCH);
+//        WebElement tabSearch = driver.findElement(com.romanceabroad.ui.Locators.LINK_SEARCH);
 //
 //        if (tabSearch.isDisplayed()) {
 //            tabSearch.click();
@@ -84,7 +86,7 @@ public class Conditions extends BaseUI {
 //        mainPage.clickJoinButton();
 //        mainPage.completeFirstPartOfRegistartion();
 //
-//        WebElement checkbox = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+//        WebElement checkbox = driver.findElement(com.romanceabroad.ui.Locators.CHECKBOX_CONFIRMATION);
 //
 //        if (!checkbox.isSelected()) {
 //            checkbox.click();
@@ -190,7 +192,7 @@ public class Conditions extends BaseUI {
 //
 //    @Test
 //    public void test12() {
-//        WebElement photo_tab = driver.findElement(Locators.LINK_PHOTOS);
+//        WebElement photo_tab = driver.findElement(com.romanceabroad.ui.Locators.LINK_PHOTOS);
 //        photo_tab.click();
 //        List<WebElement> tabs = driver.findElements(By.xpath("//ul[@class='b-tabs']//li"));
 //        for (int i = 0; i < tabs.size(); i++) {
@@ -217,7 +219,7 @@ public class Conditions extends BaseUI {
     public void test14() {
 //        By linkJoinToday = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
         mainPage.ajaXClick(Locators.TABS_OF_MAIN_PAGE, 4);
-//        mainPage.performClick(Locators.TABS_OF_MAIN_PAGE, 4);
+//        mainPage.performClick(com.romanceabroad.ui.Locators.TABS_OF_MAIN_PAGE, 4);
 //        mainPage.scrollToTheBottomOfThePage();
 //        WebElement element;
 //        mainPage.ajaxScroll(element = driver.findElement(By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']")));

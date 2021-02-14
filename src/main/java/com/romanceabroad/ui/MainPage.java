@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,9 +55,9 @@ public class MainPage extends BaseActions {
         clickValueOfLists(Locators.LIST_OF_SPECIFIC_LOCATIONS, specific_location);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.CHECKBOX_CONFIRMATION)));
 
-//        WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+//        WebElement checkboxConfirmation = driver.findElement(com.romanceabroad.ui.Locators.CHECKBOX_CONFIRMATION);
 //        boolean selectedCheckbox = checkboxConfirmation.isSelected();
-//        System.out.println(Data.printCheckboxConf);
+//        System.out.println(com.romanceabroad.ui.Data.printCheckboxConf);
 //        checkboxConfirmation.click();
     }
 

@@ -1,13 +1,7 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+package com.romanceabroad.ui;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 
 public class MainPageTests extends BaseUI{
@@ -59,7 +53,7 @@ public class MainPageTests extends BaseUI{
 //    public void testLinksOnMainPage() {
 //        mainPage.checkLinksOnWebPage("//a", "href");
 //        mainPage.checkLinksOnWebPage("//img", "src");
-////        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+////        driver.findElement(com.romanceabroad.ui.Locators.LINK_PRETTY_WOMEN).click();
 ////        mainPage.checkLinksOnWebPage("//a", "href");
 ////        mainPage.checkLinksOnWebPage("//img", "src");
 //    }
@@ -82,7 +76,7 @@ public class MainPageTests extends BaseUI{
 //            info = mainPage.getMainTabs().get(i).getText();
 //            System.out.println(info);
 //            mainPage.getMainTabs().get(i).click();
-//            driver.get(Data.mainUrl);
+//            driver.get(com.romanceabroad.ui.Data.mainUrl);
 //            mainPage.getMainTabs();
 //
 //        }
@@ -96,44 +90,44 @@ public class MainPageTests extends BaseUI{
 
 //    @Test
 //    public void testHowWeWorkPage() {
-//        driver.findElement(Locators.LINK_HOW_WE_WORK).click();
+//        driver.findElement(com.romanceabroad.ui.Locators.LINK_HOW_WE_WORK).click();
 //        currentUrlSearch = driver.getCurrentUrl();
 //        System.out.println(currentUrlSearch);
-//        Assert.assertEquals(currentUrlSearch, Data.expectedUrlHowWeWork);
+//        Assert.assertEquals(currentUrlSearch, com.romanceabroad.ui.Data.expectedUrlHowWeWork);
 //
 //    }
 //
 //    @Test
 //    public void testPrettyWomenPage() {
-//        driver.findElements(Locators.LINK_SEARCH).get(Data.index_link_PRETTY_Women).click();
+//        driver.findElements(com.romanceabroad.ui.Locators.LINK_SEARCH).get(com.romanceabroad.ui.Data.index_link_PRETTY_Women).click();
 //    }
 //
 //    @Test
 //    public void testPhotosPage() {
-//        driver.findElement(Locators.LINK_PHOTOS).click();
+//        driver.findElement(com.romanceabroad.ui.Locators.LINK_PHOTOS).click();
 //        currentUrlSearch = driver.getCurrentUrl();
 //        System.out.println(currentUrlSearch);
-//        Assert.assertEquals(currentUrlSearch, Data.expectedUrlPhotos);
+//        Assert.assertEquals(currentUrlSearch, com.romanceabroad.ui.Data.expectedUrlPhotos);
 //    }
 //
 //    @Test
 //    public void testTourToUkrainePage() {
-//        currentTitleSearch = driver.findElement(Locators.LINK_TOUR_TO_UKRAINE).getText();
+//        currentTitleSearch = driver.findElement(com.romanceabroad.ui.Locators.LINK_TOUR_TO_UKRAINE).getText();
 //        System.out.println(currentTitleSearch);
-//        Assert.assertEquals(currentTitleSearch, Data.expectedTabTitle);
+//        Assert.assertEquals(currentTitleSearch, com.romanceabroad.ui.Data.expectedTabTitle);
 //    }
 //
 //    @Test
 //    public void testBlogPage() {
-//        driver.findElement(Locators.LINK_BLOG).click();
+//        driver.findElement(com.romanceabroad.ui.Locators.LINK_BLOG).click();
 //        currentTitleSearch = driver.getTitle();
 //        System.out.println(currentTitleSearch);
-//        Assert.assertEquals(currentTitleSearch, Data.expectedTitleBlog);
+//        Assert.assertEquals(currentTitleSearch, com.romanceabroad.ui.Data.expectedTitleBlog);
 //    }
 //
 //    @Test
 //    public void testSignInPage() {
-//        WebElement linkSignIn = driver.findElement(Locators.LINK_SignIn);
+//        WebElement linkSignIn = driver.findElement(com.romanceabroad.ui.Locators.LINK_SignIn);
 //        linkSignIn.click();
 //    }
 
@@ -145,7 +139,7 @@ public class MainPageTests extends BaseUI{
 //1. For "Home" web-element: //a[@href='#'][@class='nav-link']
 //2. For YouTube play button web-element: //button[@class='ytp-large-play-button ytp-button'][@aria-label='Play']
 //3. For "Request Tour Info" web-element: //a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc'][@target='_blank']
-//4. For Picture from carousel on MainPage web-element: //img[@class=' img-fluid'][@src='/img/portfolio/slideimg12.jpg']
+//4. For Picture from carousel on com.romanceabroad.ui.MainPage web-element: //img[@class=' img-fluid'][@src='/img/portfolio/slideimg12.jpg']
 //5. For "Join Today" web-element: //a[@href='#'][@data-action='show-registration-block']
 //6. For "Facebook" web-element: //a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks'][@target='_blank']
 //7. For "Sign In" button after clicking "SIGN IN" link: //button[@class='btn btn-primary'][@type='submit']

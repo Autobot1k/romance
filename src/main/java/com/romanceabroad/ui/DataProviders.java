@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.annotations.DataProvider;
 
 import java.nio.file.Files;
@@ -25,6 +27,17 @@ public class DataProviders {
                 {Data.email1, Data.nickname, true},
                 {Data.email2, Data.nickname, false},
                 {Data.email3, Data.nickname, true},
+        };
+    }
+
+    @DataProvider(name = "Search")
+    public static Object[][] testSearchFeature() {
+        return new Object[][] {
+                {"18", "80", "Default"},
+//                {"18", "19", "Name"},
+//                {"38", "40", "Views"},
+//                {"60", "80", "Registration date"},
+
         };
     }
 }

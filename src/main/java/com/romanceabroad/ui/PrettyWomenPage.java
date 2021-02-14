@@ -1,6 +1,11 @@
+package com.romanceabroad.ui;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 public class PrettyWomenPage extends BaseActions {
 
@@ -24,8 +29,14 @@ public class PrettyWomenPage extends BaseActions {
         return dropDownListSortBy;
     }
 
+    public List<WebElement> infoListAboutUser(){
+        List<WebElement> infoAboutUser = driver.findElements(Locators.LIST_OF_WOMEN);
+        return infoAboutUser;
+    }
+
+
 //    public WebElement dropDownList(){
-//        WebElement dropDownListelement = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
+//        WebElement dropDownListelement = driver.findElement(com.romanceabroad.ui.Locators.DROP_DOWN_LIST_SORT_BY);
 //        return dropDownListelement;
 //    }
 
