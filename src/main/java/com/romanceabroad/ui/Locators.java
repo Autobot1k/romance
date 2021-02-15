@@ -73,6 +73,7 @@ public class Locators {
 
     //Sign IN tab
     public static final By LINK_SignIn = By.xpath("//a[@id='ajax_login_link']");
+    public static final By BUTTON_SignIn = By.xpath("//button[@name='logbtn']");
 
     //Search
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");

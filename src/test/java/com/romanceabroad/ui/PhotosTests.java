@@ -26,12 +26,11 @@ public class PhotosTests extends BaseUI{
     @Test
     public void testGalleriesTabs(){
         photosPage.clickPhotoTab();
-        photosPage.userTabs();
-        int photoTabs = photosPage.userTabs().size();
+        List<WebElement> userTabs = photosPage.userTabs();
         actualTitle = photosPage.getAnyTitle();
         Assert.assertEquals(actualTitle, Data.expectedTitle);
-        for (int i = 0; i < photoTabs; i++) {
-            photosPage.userTabs().get(i).click();
+        for (int i = 0; i < userTabs.size() ; i++) {
+            userTabs.get(i).click();
             actualTitle = photosPage.getAnyTitle();
             if(i==0){
                 Assert.assertEquals(actualTitle, Data.expectedTitleGallery);
@@ -45,7 +44,7 @@ public class PhotosTests extends BaseUI{
             else if(i==3){
                 Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
             }
-            photosPage.userTabs();
+            userTabs = photosPage.userTabs();
         }
 
     }

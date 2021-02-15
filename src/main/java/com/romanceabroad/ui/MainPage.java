@@ -36,6 +36,10 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
+    public void clickButtonSignIn(){
+        driver.findElement(Locators.BUTTON_NEXT).click();
+    }
+
     public void completeSecondPartOfRegistration(String userNameInput, String day, String month, String year, String phone, String location, String specific_location){
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(userNameInput);
 
@@ -129,6 +133,10 @@ public class MainPage extends BaseActions {
     public boolean captchTitleIsDisplayed(){
         boolean captchTitleIsDisplayed = driver.findElement(Locators.CAPTCHA_TITLE).isDisplayed();
         return captchTitleIsDisplayed;
+    }
+
+    public void clickSignInTab(){
+        driver.findElement(Locators.LINK_SignIn).click();
     }
 
 

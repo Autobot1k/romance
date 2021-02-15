@@ -32,6 +32,17 @@ public class MainPageTests extends BaseUI{
                     Data.month, Data.year, Data.phone, Data.location, Data.specific_location);
         }
 
+
+//    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
+//    public void testSignIn(String email, String password){
+//        System.out.println(email);
+//        System.out.println(password);
+//        mainPage.clickSignInTab();
+//
+//        mainPage.clickButtonSignIn();
+//
+//        }
+
     }
 
 //    @Test()

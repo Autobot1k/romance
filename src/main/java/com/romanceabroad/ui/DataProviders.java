@@ -40,4 +40,13 @@ public class DataProviders {
 
         };
     }
+
+    @DataProvider(name = "Sign In")
+    public static Object[][] testSignIn() {
+        return new Object[][] {
+                {Data.email1, Data.passwordInput},
+                {Data.email3, Data.passwordInput},
+                {Data.email4, Data.passwordInput},
+        };
+    }
 }

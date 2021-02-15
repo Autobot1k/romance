@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class PrettyWomenTests extends BaseUI {
 
     public static final boolean testCase1 = true;
@@ -111,12 +113,12 @@ public class PrettyWomenTests extends BaseUI {
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sort);
         prettyWomenPage.clickSearchPrettyWomen();
 
-        int listOfUsers = prettyWomenPage.infoListAboutUser().size();
-        System.out.println(listOfUsers);
-        for (int i = 0; i < listOfUsers; i++) {
+        List<WebElement> listOfUsers = prettyWomenPage.infoListAboutUser();
+
+        for (int i = 0; i < listOfUsers.size(); i++) {
             if(i % 2 == 0){
-                WebElement text = prettyWomenPage.infoListAboutUser().get(i);
-                String info = text.getText();
+
+                String info = listOfUsers.get(i).getText();
                 String[] splitedPhrase = info.split(",");
                 String age = splitedPhrase[1];
                 int ageNum = Integer.parseInt(age);
@@ -127,7 +129,8 @@ public class PrettyWomenTests extends BaseUI {
                     Assert.fail("Wrong age: " + ageNum);
                 }
             }
-            prettyWomenPage.infoListAboutUser();
+            mainPage.javaWaitSec(3);
+            listOfUsers = prettyWomenPage.infoListAboutUser();
 
         }
     }
