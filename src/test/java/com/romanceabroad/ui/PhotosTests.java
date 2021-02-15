@@ -24,7 +24,7 @@ public class PhotosTests extends BaseUI{
     }
 
     @Test
-    public void testUserTabs(){
+    public void testGalleriesTabs(){
         photosPage.clickPhotoTab();
         photosPage.userTabs();
         int photoTabs = photosPage.userTabs().size();
