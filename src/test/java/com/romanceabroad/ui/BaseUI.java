@@ -1,6 +1,5 @@
 package com.romanceabroad.ui;
 
-import com.romanceabroad.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,7 +26,7 @@ public class BaseUI {
     GiftPage giftPage;
     ContactUsPage contactUsPage;
     PrettyWomenPage prettyWomenPage;
-    MediaPage mediaPage;
+    PhotosPage photosPage;
     BlogPage blogPage;
     SoftAssert softAssert = new SoftAssert();
 
@@ -86,7 +85,7 @@ public class BaseUI {
         mainPage = new MainPage(driver, wait);
         howWeWorkPage = new HowWeWorkPage(driver, wait);
         prettyWomenPage = new PrettyWomenPage(driver, wait);
-        mediaPage = new MediaPage(driver, wait);
+        photosPage = new PhotosPage(driver, wait);
         giftPage = new GiftPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         contactUsPage = new ContactUsPage(driver, wait);

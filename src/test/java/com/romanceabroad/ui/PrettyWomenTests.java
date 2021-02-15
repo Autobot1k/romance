@@ -1,13 +1,8 @@
 package com.romanceabroad.ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
-
 
 public class PrettyWomenTests extends BaseUI {
 
@@ -119,12 +114,19 @@ public class PrettyWomenTests extends BaseUI {
         int listOfUsers = prettyWomenPage.infoListAboutUser().size();
         System.out.println(listOfUsers);
         for (int i = 0; i < listOfUsers; i++) {
-            WebElement text = prettyWomenPage.infoListAboutUser().get(i);
-//            In my case testCase is working without ajax.Scroll and wait.until
-//            prettyWomenPage.ajaxScroll(text);
-//            wait.until(ExpectedConditions.visibilityOf(text));
-            String info = text.getText();
-            System.out.println(info);
+            if(i % 2 == 0){
+                WebElement text = prettyWomenPage.infoListAboutUser().get(i);
+                String info = text.getText();
+                String[] splitedPhrase = info.split(",");
+                String age = splitedPhrase[1];
+                int ageNum = Integer.parseInt(age);
+
+                if(min <= ageNum || ageNum <= max){
+                    System.out.println("This age: " + ageNum + " is correct");
+                }else {
+                    Assert.fail("Wrong age: " + ageNum);
+                }
+            }
             prettyWomenPage.infoListAboutUser();
 
         }

@@ -63,6 +63,7 @@ public class Locators {
 
     //Photos tab
     public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");
+    public static final By LIST_OF_GALLERIES = By.xpath("//ul[@id='gallery_filters']//a");
 
     //Tour to Ukraine tab
     public static final By LINK_TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
