@@ -61,4 +61,7 @@ public class Data {
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
     public static final int index_link_PRETTY_Women = 0;
+
+    //Media
+    public static final String textMedia = "On our website you have access to photos of all different kinds of women";
 }

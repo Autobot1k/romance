@@ -28,6 +28,7 @@ public class BaseUI {
     PrettyWomenPage prettyWomenPage;
     PhotosPage photosPage;
     BlogPage blogPage;
+    ProfilePage profilePage;
     SoftAssert softAssert = new SoftAssert();
 
 
@@ -89,6 +90,7 @@ public class BaseUI {
         giftPage = new GiftPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         contactUsPage = new ContactUsPage(driver, wait);
+        profilePage = new ProfilePage(driver, wait);
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
     }

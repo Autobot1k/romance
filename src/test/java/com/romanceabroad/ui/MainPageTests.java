@@ -42,7 +42,7 @@ public class MainPageTests extends BaseUI{
 //        mainPage.clickButtonSignIn();
 //
 //        }
-
+//
     }
 
 //    @Test()

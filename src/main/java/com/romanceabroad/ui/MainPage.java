@@ -139,6 +139,10 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LINK_SignIn).click();
     }
 
+    public void clickPhotoTab(){
+        driver.findElement(Locators.LINK_PHOTOS).click();
+    }
+
 
 
 }

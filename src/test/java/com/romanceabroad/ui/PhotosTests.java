@@ -25,27 +25,44 @@ public class PhotosTests extends BaseUI{
 
     @Test
     public void testGalleriesTabs(){
-        photosPage.clickPhotoTab();
+        mainPage.clickPhotoTab();
         List<WebElement> userTabs = photosPage.userTabs();
         actualTitle = photosPage.getAnyTitle();
         Assert.assertEquals(actualTitle, Data.expectedTitle);
-        for (int i = 0; i < userTabs.size() ; i++) {
+
+        for (int i = 0; i < userTabs.size(); i++) {
             userTabs.get(i).click();
             actualTitle = photosPage.getAnyTitle();
-            if(i==0){
+
+//            if(actualTitle.contains(Data.expectedTitleGallery) || actualTitle.contains(Data.expectedTitlePhotoGallery) ||
+//                    actualTitle.contains(Data.expectedTitleVideoGallery) || actualTitle.contains(Data.expectedTitleGalleryAlbums)){
+//                System.out.println("Title is valid: " + actualTitle);
+//            } else {
+//                Assert.fail("Title is not valid");
+//            }
+
+            if(i==0) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleGallery);
             }
-            else if(i==1){
+            else if(i==1) {
                 Assert.assertEquals(actualTitle, Data.expectedTitlePhotoGallery);
             }
-            else if(i==2){
+            else if(i==2) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
+                //photosPage.ajaxclick(By.xpath("//div[@class='g-flatty-block']"));
+                String textMedia = photosPage.pageBlock().getText();
+                System.out.println(textMedia);
+                if(textMedia.contains(Data.textMedia)){
+                    System.out.println("Amazing! TextMedia is correct!");
+                }
             }
-            else if(i==3){
+            else if(i==3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
+                //photosPage.ajaxclick(By.xpath("//div[@class='main-inner-content']"));
+                photosPage.javaWaitSec(2);
+                Assert.assertTrue(photosPage.pleaseSelect().isDisplayed());
             }
             userTabs = photosPage.userTabs();
         }
-
     }
 }

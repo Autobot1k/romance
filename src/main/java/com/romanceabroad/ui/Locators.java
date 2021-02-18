@@ -64,6 +64,8 @@ public class Locators {
     //Photos tab
     public static final By LINK_PHOTOS = By.xpath("//a[contains(text(),'PHOTOS')]");
     public static final By LIST_OF_GALLERIES = By.xpath("//ul[@id='gallery_filters']//a");
+    public static final By PAGE_BLOCK = By.xpath("//div[@class='g-flatty-block']");
+    public static final By PLEASE_SELECT = By.xpath("//div[@class='g-flatty-block']");
 
     //Tour to Ukraine tab
     public static final By LINK_TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
