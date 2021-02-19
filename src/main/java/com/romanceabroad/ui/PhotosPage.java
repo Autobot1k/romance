@@ -1,5 +1,6 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,6 +27,17 @@ public class PhotosPage extends BaseActions {
         WebElement pleaseSelect = driver.findElement(Locators.PLEASE_SELECT);
         return pleaseSelect;
     }
+
+    public WebElement element (){
+        WebElement element = driver.findElement(Locators.WRAPPER);
+        return element;
+    }
+
+    public List<WebElement> users(){
+        List<WebElement> users = driver.findElements(Locators.USER_NAME_LINKS);;
+        return users;
+    }
+
 
 
 

@@ -129,7 +129,7 @@ public class PrettyWomenTests extends BaseUI {
                     Assert.fail("Wrong age: " + ageNum);
                 }
             }
-            mainPage.javaWaitSec(3);
+            //mainPage.javaWaitSec(3);
             listOfUsers = prettyWomenPage.infoListAboutUser();
 
         }
