@@ -34,7 +34,7 @@ public class PhotosPage extends BaseActions {
     }
 
     public List<WebElement> users(){
-        List<WebElement> users = driver.findElements(Locators.USER_NAME_LINKS);;
+        List<WebElement> users = driver.findElements(Locators.USER_NAME_LINKS);
         return users;
     }
 

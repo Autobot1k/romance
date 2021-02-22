@@ -47,6 +47,7 @@ public class Data {
     //Photos
     public static final String expectedUrlMedia = "https://romanceabroad.com/media/index";
     public static final String expectedTitle = "Ukrainian women photos";
+    public static final String expectedCountry = "Ukraine";
     public static final String expectedTitleGallery = "Gallery";
     public static final String expectedTitlePhotoGallery = "Photo gallery";
     public static final String expectedTitleVideoGallery = "Video gallery";
