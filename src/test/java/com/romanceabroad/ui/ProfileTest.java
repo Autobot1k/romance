@@ -19,9 +19,12 @@ public class ProfileTest extends BaseUI {
         for (int i = 0; i < users.size(); i++) {
             users.get(i).click();
             profilePage.javaWaitSec(3);
+            driver.close();
             ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-            //driver.close();
-            driver.switchTo().window(tabs2.get(1));
+            driver.switchTo().window(tabs2.get(0));
+
+
+//            driver.get("https://romanceabroad.com/users/view/311/profile");
             profilePage.ajaxClick(driver.findElement(By.xpath("//div[@id='main_page']")));
             String description = driver.findElement(By.xpath("//div[contains(@class, 'user-description')]")).getText();
             System.out.println(description);
@@ -32,18 +35,15 @@ public class ProfileTest extends BaseUI {
             System.out.println(actualCountry);
             System.out.println("----------------");
             Assert.assertEquals(actualCountry, "Ukraine");
-            driver.close();
-            driver.switchTo().window(tabs2.get(0));
+//            driver.close();
+            driver.get("https://romanceabroad.com/media/index");
+            photosPage.javaWaitSec(1);
+            users = driver.findElements(By.xpath("//a[@class='g-users-gallery__name']"));
+
+//            int userCount = users.size();
+//            System.out.println(userCount);
+//            System.out.println(driver.findElement(Locators.H1_TITLE).getText());
         }
-        users = driver.findElements(By.xpath("//a[@class='g-users-gallery__name']"));
-
-        //profilePage.ajaxClick(driver.findElement(By.xpath("//a[contains(text(),'Wall')]")));
-//        profilePage.javaWaitSec(2);
-//        List<WebElement> photos = driver.findElements(By.xpath("//span[@class='g-pic-border g-rounded']"));
-//        int quantity = photos.size();
-//        System.out.println(quantity);
-
-
     }
 
 
