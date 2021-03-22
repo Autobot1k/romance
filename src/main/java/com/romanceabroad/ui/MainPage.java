@@ -24,7 +24,7 @@ public class MainPage extends BaseActions {
     }
 
     public void completeFirstPartOfRegistration(String email, String password){
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_FIELD)));
         driver.findElement(Locators.EMAIL_FIELD).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
@@ -37,7 +37,15 @@ public class MainPage extends BaseActions {
     }
 
     public void clickButtonSignIn(){
-        driver.findElement(Locators.BUTTON_NEXT).click();
+        driver.findElement(Locators.BUTTON_SignIn).click();
+    }
+
+    public void completeSignInForm(String email, String password){
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_SIGN_IN)));
+        driver.findElement(Locators.EMAIL_SIGN_IN).sendKeys(email);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_SIGN_IN)));
+        driver.findElement(Locators.PASSWORD_SIGN_IN).sendKeys(password);
     }
 
     public void completeSecondPartOfRegistration(String userNameInput, String day, String month, String year, String phone, String location, String specific_location){

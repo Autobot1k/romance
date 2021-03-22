@@ -19,7 +19,7 @@ public class Data {
     public static final String email1 = "AAA@gmail.com";
     public static final String email2 = "123aol.com";
     public static final String email3 = "aaa@xyz.com";
-    public static final String email4 = "user@gmail.com";
+    public static final String email4 = "usergmail.com";
     public static final String passwordInput = "AAAAAAAAAAA";
     public static final String userNameInput = "James";
     public static final String nickname = BaseActions.generateNewNumber(Data.userNameInput, Data.secondPartOfName);

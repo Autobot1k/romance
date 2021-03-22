@@ -77,6 +77,8 @@ public class Locators {
 
     //Sign IN tab
     public static final By LINK_SignIn = By.xpath("//a[@id='ajax_login_link']");
+    public static final By EMAIL_SIGN_IN = By.xpath("//div[@class='inside logform']//input[@id='email']");
+    public static final By PASSWORD_SIGN_IN = By.xpath("//div[@class='inside logform']//input[@id='password']");
     public static final By BUTTON_SignIn = By.xpath("//button[@name='logbtn']");
 
     //Search

@@ -4,13 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class MainPageTests extends BaseUI{
+public class MainPageTests extends BaseUI {
 
 
     //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!
 
     @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
-    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city ,String location) {
+    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
         mainPage.clickButtonNext();
@@ -19,31 +19,31 @@ public class MainPageTests extends BaseUI{
         mainPage.clickCheckBoxConfirmation();
     }
 
+    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
+    public void testSignIn(String email, String password){
+        System.out.println(email);
+        System.out.println(password);
+        mainPage.clickSignInTab();
+        mainPage.completeSignInForm(email, password);
+
+        mainPage.clickButtonSignIn();
+
+    }
+
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickname, boolean requirement) {
         System.out.println(email);
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.passwordInput);
-        if(!requirement) {
+        if (!requirement) {
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
-        }else{
+        } else {
             mainPage.clickButtonNext();
             mainPage.completeSecondPartOfRegistration(nickname, Data.day,
                     Data.month, Data.year, Data.phone, Data.location, Data.specific_location);
         }
-
-
-//    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
-//    public void testSignIn(String email, String password){
-//        System.out.println(email);
-//        System.out.println(password);
-//        mainPage.clickSignInTab();
-//
-//        mainPage.clickButtonSignIn();
-//
-//        }
-//
     }
+}
 
 //    @Test()
 //    public void testVideoWebElement() throws InterruptedException {
@@ -93,10 +93,6 @@ public class MainPageTests extends BaseUI{
 //        }
 //
 //    }
-}
-
-
-
 
 
 //    @Test
@@ -143,8 +139,6 @@ public class MainPageTests extends BaseUI{
 //    }
 
 
-
-
 // 10 xPaths with 2 attributes:
 
 //1. For "Home" web-element: //a[@href='#'][@class='nav-link']
@@ -171,16 +165,6 @@ public class MainPageTests extends BaseUI{
 //8. For "Register" link after clicking "SIGN IN" link: //div[@class='col-xs-12']//a[@href='javascript:;']
 //9. For "Heart Logo" web-element on "How we work" page: //div[@class='logo-mobile-version top-menu-item']//a[@href='https://romanceabroad.com/']
 //10. For "Advertising" web-element on "How we work" page: //div[@class='info-menu-inner']//a[@href='https://romanceabroad.com/content/view/advertising']
-
-
-
-
-
-
-
-
-
-
 
 
 // 10 xPaths:

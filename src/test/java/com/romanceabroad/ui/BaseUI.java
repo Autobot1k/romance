@@ -53,7 +53,7 @@ public class BaseUI {
 
         else if (browser.equalsIgnoreCase("chrome")) {
 
-            // Set path to chromedriver.exe
+            // Set path to chromedriverOld.exe
 
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
