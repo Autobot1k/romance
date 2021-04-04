@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="ChromeTestCases2(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.romanceabroad.ui.MainPageTests">
+        <methods>
+          <include name="afterActions"/>
+          <include name="testRegistration"/>
+          <include name="testSignIn"/>
+          <include name="setup"/>
+          <include name="testRegistration2"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.MainPageTests -->
+    </classes>
+  </test> <!-- ChromeTestCases2(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

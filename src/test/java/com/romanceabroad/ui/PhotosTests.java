@@ -1,18 +1,23 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
+
+@Listeners(VideoListener.class)
 
 public class PhotosTests extends BaseUI{
 
     String actualTitle;
 
-
+    @Video(name = "Media test")
     @Test
     public void testMediaPage(){
         wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_PHOTOS));

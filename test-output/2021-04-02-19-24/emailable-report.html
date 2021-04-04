@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">TestSuite</th></tr>
+<tr><td><a href="#t0">ChromeTestCases2</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">449,835</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTestCases2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.romanceabroad.ui.MainPageTests</td><td><a href="#m0">testRegistration</a></td><td rowspan="1">1617391688744</td><td rowspan="1">13203</td></tr><tr><th colspan="4">ChromeTestCases2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.romanceabroad.ui.MainPageTests</td><td><a href="#m1">testRegistration</a></td><td rowspan="2">1617391620487</td><td rowspan="2">8568</td></tr><tr class="passedeven"><td><a href="#m2">testRegistration</a></td></tr><tr class="passedeven"><td><a href="#m3">testRegistration2</a></td><td rowspan="1">1617391759455</td><td rowspan="1">11098</td></tr><tr class="passedeven"><td><a href="#m4">testSignIn</a></td><td rowspan="1">1617391918577</td><td rowspan="1">13889</td></tr></tbody>
+</table>
+<h2>ChromeTestCases2</h2><h3 id="m0">com.romanceabroad.ui.MainPageTests#testRegistration</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>search@aol.com</td><td>p@ssw0rd</td><td>12</td><td>Jul</td><td>1975</td><td>8754531287</td><td>Miami</td><td>Florida</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input data-action=&quot;validation&quot; data-field=&quot;confirmation&quot; id=&quot;confirmation&quot; type=&quot;checkbox&quot; name=&quot;data[confirmation]&quot; value=&quot;1&quot;&gt; is not clickable at point (756, 642). Other element would receive the click: &lt;li gid=&quot;rs_4&quot; lat=&quot;25.9420400&quot; lon=&quot;-80.2456000&quot; city=&quot;355835&quot; region=&quot;4981&quot; country=&quot;US&quot;&gt;...&lt;/li&gt;
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;169.254.15.239&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 03eaa538342e1a60203eced32b9439be
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.romanceabroad.ui.MainPage.clickCheckBoxConfirmation(MainPage.java:140)
+	at com.romanceabroad.ui.MainPageTests.testRegistration(MainPageTests.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.romanceabroad.ui.MainPageTests#testRegistration</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>edit@mail.ru</td><td>p@ssword</td><td>1</td><td>Jun</td><td>1999</td><td>5667779999</td><td>Miami</td><td>Florida</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.romanceabroad.ui.MainPageTests#testRegistration</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>file@gmail.com</td><td>password</td><td>10</td><td>May</td><td>2010</td><td>3479998888</td><td>Miami</td><td>Florida</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.romanceabroad.ui.MainPageTests#testRegistration2</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>AAA@gmail.com</td><td>James8</td><td>true</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.romanceabroad.ui.MainPageTests#testSignIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>usergmail.com</td><td>AAAAAAAAAAA</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

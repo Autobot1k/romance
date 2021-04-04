@@ -1,15 +1,21 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Listeners(VideoListener.class)
+
 public class GiftTests extends BaseUI {
 
+    @Video(name = "GiftsLink test")
     @Test
     public void testLinkGiftsPage() {
         mainPage.clickGiftsLink();

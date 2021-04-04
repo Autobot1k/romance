@@ -1,16 +1,22 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Listeners(VideoListener.class)
+
 public class ProfileTest extends BaseUI {
 
+    @Video(name = "ProfilePage test")
     @Test
     public void profilePageTest() {
         mainPage.clickPhotoTab();

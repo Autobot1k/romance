@@ -19,20 +19,32 @@ public class MainPage extends BaseActions {
         super(driver, wait);
     }
 
+
     public void clickJoinButton(){
+        Reports.log("Wait Join button");
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
         driver.findElement(Locators.BUTTON_REGISTRATION).click();
     }
 
     public void completeFirstPartOfRegistration(String email, String password){
+        Reports.log("Wait email text field");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_FIELD)));
+
+        Reports.log("Type email in text field: " + email);
         driver.findElement(Locators.EMAIL_FIELD).sendKeys(email);
+
+        Reports.log("Wait password text field");
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
+
+        Reports.log("Type password in text field: " + password);
         driver.findElement(Locators.PASSWORD_FIELD).sendKeys(password);
     }
 
     public void clickButtonNext(){
+        Reports.log("Wait Next button");
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
+        Reports.log("Click Next button");
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
@@ -49,23 +61,43 @@ public class MainPage extends BaseActions {
     }
 
     public void completeSecondPartOfRegistration(String userNameInput, String day, String month, String year, String phone, String location, String specific_location){
+        Reports.log("Type nickname: " + userNameInput);
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(userNameInput);
 
+        Reports.log("Click list of days");
         driver.findElement(Locators.SELECT_DAY_FIELD).click();
+
+        Reports.log("Select specific day: " + day);
         clickValueOfLists(Locators.PICK_A_DAY, day);
 
+        Reports.log("Click list of month");
         driver.findElement(Locators.SELECT_MONTH_FIELD).click();
+
+        Reports.log("Select specific month: " + month);
         clickValueOfLists(Locators.PICK_A_MONTH, month);
 
+        Reports.log("Click list of year");
         driver.findElement(Locators.SELECT_YEAR_FIELD).click();
+
+        Reports.log("Select specific year: " + year);
         clickValueOfLists(Locators.PICK_A_YEAR, year);
 
+        Reports.log("Type phone number: " + phone);
         driver.findElement(Locators.PHONE_FIELD).sendKeys(phone);
 
+        Reports.log("Clean location autofilling form");
         driver.findElement(Locators.LOCATION_FIELD).clear();
+
+        Reports.log("Type location: " + location);
         driver.findElement(Locators.LOCATION_FIELD).sendKeys(location);
+
+        Reports.log(": " + phone);
         clickValueOfLists(Locators.LIST_OF_SPECIFIC_LOCATIONS, specific_location);
+
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.CHECKBOX_CONFIRMATION)));
+        Reports.log("Click confirmation checkbox");
+        driver.findElement(com.romanceabroad.ui.Locators.CHECKBOX_CONFIRMATION).click();
+
 
 //        WebElement checkboxConfirmation = driver.findElement(com.romanceabroad.ui.Locators.CHECKBOX_CONFIRMATION);
 //        boolean selectedCheckbox = checkboxConfirmation.isSelected();

@@ -1,16 +1,23 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(VideoListener.class)
 
 public class MainPageTests extends BaseUI {
 
 
     //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!
 
+    @Video(name = "Registration test")
     @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
+
     public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
+
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
         mainPage.clickButtonNext();
@@ -36,6 +43,7 @@ public class MainPageTests extends BaseUI {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.passwordInput);
         if (!requirement) {
+            Reports.log("Error message is not displayed");
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
         } else {
             mainPage.clickButtonNext();

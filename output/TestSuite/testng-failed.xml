@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="classes" name="ChromeTestCases2(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.romanceabroad.ui.BlogTest2">
+        <methods>
+          <include name="afterActions"/>
+          <include name="testBlog"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.BlogTest2 -->
+      <class name="com.romanceabroad.ui.BlogTest">
+        <methods>
+          <include name="afterActions"/>
+          <include name="testBlog"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.BlogTest -->
+    </classes>
+  </test> <!-- ChromeTestCases2(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
