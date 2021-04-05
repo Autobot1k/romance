@@ -2,6 +2,8 @@ package com.romanceabroad.ui;
 
 import com.automation.remarks.testng.VideoListener;
 import com.automation.remarks.video.annotations.Video;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -26,14 +28,18 @@ public class MainPageTests extends BaseUI {
         mainPage.clickCheckBoxConfirmation();
     }
 
+
     @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
-    public void testSignIn(String email, String password){
-        System.out.println(email);
-        System.out.println(password);
+    public void testSignIn(String email, String password, boolean requirement){
         mainPage.clickSignInTab();
         mainPage.completeSignInForm(email, password);
-
         mainPage.clickButtonSignIn();
+        if(!requirement) {
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']"))));
+            //Assert.assertTrue(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']")).isDisplayed());
+        }
+
+
 
     }
 
