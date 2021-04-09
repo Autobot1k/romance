@@ -44,7 +44,7 @@ public class DataProviders {
     @DataProvider(name = "Sign In")
     public static Object[][] testSignIn() {
         return new Object[][] {
-                {Data.email4, Data.passwordInput, false}
+                {Data.email4, Data.passwordInput, true}
         };
     }
 }
