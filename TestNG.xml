@@ -57,6 +57,14 @@
         <classes>
 
             <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.ProfileTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTests"/>
+            <class name="com.romanceabroad.ui.PhotosTests"/>
+            <class name="com.romanceabroad.ui.HowWeWorkTest"/>
+            <class name="com.romanceabroad.ui.HowWeWorkTest"/>
+            <class name="com.romanceabroad.ui.GiftTests"/>
+            <class name="com.romanceabroad.ui.ContactUsTest"/>
+            <class name="com.romanceabroad.ui.BlogTest"/>
 
         </classes>
 

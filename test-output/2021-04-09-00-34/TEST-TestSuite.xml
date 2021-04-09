@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="385.411" tests="20" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="webdriver.chrome.driver" value="chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\User\Documents\GitHub\romance\target\test-classes;C:\Users\User\Documents\GitHub\romance\target\classes;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.1.0\testng-7.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0-no_aop.jar;C:\Windows\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\automation-remarks\video-recorder-testng\2.0\video-recorder-testng-2.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\automation-remarks\video-recorder-core\2.0\video-recorder-core-2.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\aeonbits\owner\owner-java8\1.0.10\owner-java8-1.0.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\aeonbits\owner\owner\1.0.10\owner-1.0.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\zeroturnaround\zt-exec\1.10\zt-exec-1.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\1.4\commons-io-1.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\awaitility\awaitility\3.1.6\awaitility-3.1.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpclient\4.5.7\httpclient-4.5.7.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpcore\4.4.11\httpcore-4.4.11.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\json\json\20180813\json-20180813.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="GMT-05:00"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire2902093881076964797\surefirebooter1278923214357434273.jar C:\Windows\Temp\surefire2902093881076964797 2021-04-08T19-34-45_748-jvmRun1 surefire9118883205674979293tmp surefire_05163341164763080837tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\User\Documents\GitHub\romance\target\test-classes;C:\Users\User\Documents\GitHub\romance\target\classes;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.1.0\testng-7.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0-no_aop.jar;C:\Windows\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\automation-remarks\video-recorder-testng\2.0\video-recorder-testng-2.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\automation-remarks\video-recorder-core\2.0\video-recorder-core-2.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\aeonbits\owner\owner-java8\1.0.10\owner-java8-1.0.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\aeonbits\owner\owner\1.0.10\owner-1.0.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\zeroturnaround\zt-exec\1.10\zt-exec-1.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\1.4\commons-io-1.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\awaitility\awaitility\3.1.6\awaitility-3.1.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpclient\4.5.7\httpclient-4.5.7.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpcore\4.4.11\httpcore-4.4.11.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\json\json\20180813\json-20180813.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Windows\system32\config\systemprofile"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_281\jre"/>
+    <property name="basedir" value="C:\Users\User\Documents\GitHub\romance"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire2902093881076964797\surefirebooter1278923214357434273.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_281\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_281-b09"/>
+    <property name="user.name" value="MSI$"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Windows\system32\config\systemprofile\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
+    <property name="java.version" value="1.8.0_281"/>
+    <property name="user.dir" value="C:\Users\User\Documents\GitHub\romance"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven_3.6.3/bin;C:\Program Files\Java\jdk1.8.0_281/bin;C:\Program Files\Java\jdk1.8.0_281/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\PuTTY\;C:\Program Files\Java\jdk1.8.0_281\bin;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.281-b09"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testRegistration[file@gmail.com, password, 10, May, 2010, 3479998888, Miami, Florida](1)" classname="com.romanceabroad.ui.MainPageTests" time="5.513">
+    <system-out><![CDATA[Wait Join button
+Wait email text field
+Type email in text field: file@gmail.com
+Wait password text field
+Type password in text field: password
+Wait Next button
+Click Next button
+Type nickname: James7714351115
+Click list of days
+Select specific day: 10
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 3
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 4
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 5
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 6
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 7
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 8
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 9
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 10
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of month
+Select specific month: May
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jan
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Feb
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Mar
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Apr
+Create new webelement of list
+Create new String with text from element of list
+Value of list: May
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of year
+Select specific year: 2010
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2003
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2002
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2001
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2000
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1999
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1998
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1997
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1996
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1995
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1994
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1993
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1992
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1991
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1990
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1989
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1988
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1987
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1986
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1985
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1984
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1983
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1982
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1981
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1980
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1979
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1978
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1977
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1976
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1975
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1974
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1973
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1972
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1971
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1970
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1969
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1968
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1967
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1966
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1965
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1964
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1963
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1962
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1961
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1960
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1959
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1958
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1957
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1956
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1955
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1954
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1953
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1952
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1951
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1950
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1949
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1948
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1947
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1946
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1945
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1944
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1943
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1942
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1941
+Type phone number: 3479998888
+Clean location autofilling form
+Type location: Miami
+: 3479998888
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Arizona, United States
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami Beach, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click confirmation checkbox
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 35602
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:34:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+log4j:WARN No appenders could be found for logger (com.automation.remarks.video.recorder.monte.MonteRecorder).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration[edit@mail.ru, p@ssword, 1, Jun, 1999, 5667779999, Miami, Florida](2)" classname="com.romanceabroad.ui.MainPageTests" time="6.123">
+    <system-out><![CDATA[Wait Join button
+Wait email text field
+Type email in text field: edit@mail.ru
+Wait password text field
+Type password in text field: p@ssword
+Wait Next button
+Click Next button
+Type nickname: James7477174533
+Click list of days
+Select specific day: 1
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of month
+Select specific month: Jun
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jan
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Feb
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Mar
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Apr
+Create new webelement of list
+Create new String with text from element of list
+Value of list: May
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jun
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of year
+Select specific year: 1999
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2003
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2002
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2001
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2000
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1999
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Type phone number: 5667779999
+Clean location autofilling form
+Type location: Miami
+: 5667779999
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Arizona, United States
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami Beach, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click confirmation checkbox
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 3611
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:35:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration[search@aol.com, p@ssw0rd, 12, Jul, 1975, 8754531287, Miami, Florida](3)" classname="com.romanceabroad.ui.MainPageTests" time="4.77">
+    <system-out><![CDATA[Wait Join button
+Wait email text field
+Type email in text field: search@aol.com
+Wait password text field
+Type password in text field: p@ssw0rd
+Wait Next button
+Click Next button
+Type nickname: James8153735751
+Click list of days
+Select specific day: 12
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 3
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 4
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 5
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 6
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 7
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 8
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 9
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 10
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 11
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 12
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of month
+Select specific month: Jul
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jan
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Feb
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Mar
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Apr
+Create new webelement of list
+Create new String with text from element of list
+Value of list: May
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jun
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jul
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of year
+Select specific year: 1975
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2003
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2002
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2001
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2000
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1999
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1998
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1997
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1996
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1995
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1994
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1993
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1992
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1991
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1990
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1989
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1988
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1987
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1986
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1985
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1984
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1983
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1982
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1981
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1980
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1979
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1978
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1977
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1976
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1975
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Type phone number: 8754531287
+Clean location autofilling form
+Type location: Miami
+: 8754531287
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Arizona, United States
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Miami Beach, Florida, United States
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click confirmation checkbox
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 28961
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:35:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration2[AAA@gmail.com, James8, true](1)" classname="com.romanceabroad.ui.MainPageTests" time="5.754">
+    <system-out><![CDATA[AAA@gmail.com
+Wait Join button
+Wait email text field
+Type email in text field: AAA@gmail.com
+Wait password text field
+Type password in text field: AAAAAAAAAAA
+Wait Next button
+Click Next button
+Type nickname: James8
+Click list of days
+Select specific day: 10
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 3
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 4
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 5
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 6
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 7
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 8
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 9
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 10
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of month
+Select specific month: Jun
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jan
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Feb
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Mar
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Apr
+Create new webelement of list
+Create new String with text from element of list
+Value of list: May
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Jun
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Click list of year
+Select specific year: 1990
+Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2003
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2002
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2001
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 2000
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1999
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1998
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1997
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1996
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1995
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1994
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1993
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1992
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1991
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 1990
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Create new webelement of list
+Create new String with text from element of list
+Value of list: 
+Type phone number: 23495732475273
+Clean location autofilling form
+Type location: San Diego
+: 23495732475273
+Collect elements in list
+Start using loop with size of list
+Click confirmation checkbox
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 6366
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:35:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testSignIn[user@gmail.com, AAAAAAAAAAA, false](1)" classname="com.romanceabroad.ui.MainPageTests" time="7.744">
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 4542
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:35:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="profilePageTest" classname="com.romanceabroad.ui.ProfileTest" time="98.204">
+    <system-out><![CDATA[Last seen04 August 2018, 05:09
+41years old
+ Sumy, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen04 August 2018, 05:09
+41years old
+ Sumy, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen04 August 2018, 05:09
+41years old
+ Sumy, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen02 May 2018, 10:56
+36years old
+ Korosten’, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen02 May 2018, 10:56
+36years old
+ Korosten’, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen02 May 2018, 10:56
+36years old
+ Korosten’, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen02 May 2018, 10:56
+36years old
+ Korosten’, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen07 January 2018, 12:39
+46years old
+ Kharkiv, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen07 January 2018, 12:39
+46years old
+ Kharkiv, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen27 November 2017, 07:23
+44years old
+ Odessa, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen11 December 2017, 12:06
+39years old
+ Kharkiv, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen05 February 2018, 07:05
+35years old
+ Kharkiv, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen30 May 2019, 12:53
+38years old
+ Malyn, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen30 May 2019, 12:53
+38years old
+ Malyn, Ukraine
+---------------------
+Ukraine
+----------------
+Last seen30 May 2019, 12:53
+38years old
+ Malyn, Ukraine
+---------------------
+Ukraine
+----------------
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 3425
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:35:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="prettyWomenPageTestCase1" classname="com.romanceabroad.ui.PrettyWomenTests" time="8.087">
+    <system-out><![CDATA[https://romanceabroad.com/users/search
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 5717
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:37:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="prettyWomenWebPageCase2" classname="com.romanceabroad.ui.PrettyWomenTests" time="5.336">
+    <system-out><![CDATA[https://romanceabroad.com/users/search
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 3684
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:37:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="searchDifferentResults4[18, 80, Default](1)" classname="com.romanceabroad.ui.PrettyWomenTests" time="7.019">
+    <system-out><![CDATA[18
+80
+This age: 36 is correct
+This age: 43 is correct
+This age: 26 is correct
+This age: 46 is correct
+This age: 39 is correct
+This age: 30 is correct
+This age: 28 is correct
+This age: 40 is correct
+This age: 44 is correct
+This age: 25 is correct
+This age: 46 is correct
+This age: 45 is correct
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 41973
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:38:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="searchDifferentResults4[18, 19, Name](2)" classname="com.romanceabroad.ui.PrettyWomenTests" time="4.078">
+    <system-out><![CDATA[18
+19
+This age: 36 is correct
+This age: 43 is correct
+This age: 26 is correct
+This age: 46 is correct
+This age: 39 is correct
+This age: 30 is correct
+This age: 28 is correct
+This age: 40 is correct
+This age: 44 is correct
+This age: 25 is correct
+This age: 46 is correct
+This age: 45 is correct
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 24362
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:38:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="searchDifferentResults4[38, 40, Views](3)" classname="com.romanceabroad.ui.PrettyWomenTests" time="7.114">
+    <system-out><![CDATA[38
+40
+This age: 36 is correct
+This age: 43 is correct
+This age: 26 is correct
+This age: 46 is correct
+This age: 39 is correct
+This age: 30 is correct
+This age: 28 is correct
+This age: 40 is correct
+This age: 44 is correct
+This age: 25 is correct
+This age: 46 is correct
+This age: 45 is correct
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 8108
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:38:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="searchDifferentResults4[60, 80, Registration date](4)" classname="com.romanceabroad.ui.PrettyWomenTests" time="6.402">
+    <system-out><![CDATA[60
+80
+This age: 36 is correct
+This age: 43 is correct
+This age: 26 is correct
+This age: 46 is correct
+This age: 39 is correct
+This age: 30 is correct
+This age: 28 is correct
+This age: 40 is correct
+This age: 44 is correct
+This age: 25 is correct
+This age: 46 is correct
+This age: 45 is correct
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 4536
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:38:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testGalleriesTabs" classname="com.romanceabroad.ui.PhotosTests" time="16.153">
+    <system-out><![CDATA[All
+Photo
+Video
+Albums
+Add photo
+Add photo
+  Please select...
+   Portrait(9)
+   Animals(0)
+   Travel(0)
+     Sort by                              
+Date
+                            Views count
+                            Comments count
+                     On our website you have access to photos of all different kinds of women. As mentioned previously on our site, many Ukrainian women believe strongly in the idea of love at first sight, so they will not accuse you of anything negative for choosing them based on a picture. In Eastern Europe, it is not as accepted to dress down as casually as it is for American women. They take their appearance as how they are presenting themselves to the world and Ukraine women photos do a great job of capturing their beauty and even their personal characteristics for many.
+You will notice many gorgeous Ukraine women pictures on our website. But do not think that just because these women are beautiful that they are shallow or arrogant. We are careful to only feature women who are ready to be a part of a true partnership, whose appearance only adds on and does justice to the beauty of their inner selves.
+Amazing! TextMedia is correct!
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 2309
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:39:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testMediaPage" classname="com.romanceabroad.ui.PhotosTests" time="10.14">
+    <system-out><![CDATA[https://romanceabroad.com/media/index
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 48442
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:39:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testArticlesAndTitles" classname="com.romanceabroad.ui.HowWeWorkTest" time="17.117">
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 44415
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:39:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="compareGiftTitlesWithOptions" classname="com.romanceabroad.ui.GiftTests" time="2.716">
+    <system-out><![CDATA[8
+6
+Spa
+Chocolate and fruits
+Teddy bear
+Flower basket
+Sushi sets
+TOURS TO UKRAINE
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 48844
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:40:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testLinkGiftsPage" classname="com.romanceabroad.ui.GiftTests" time="5.217">
+    <system-out><![CDATA[https://romanceabroad.com/store/category-sweets
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 24193
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:40:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testValueOfTheListInFooterMenuGiftsPage" classname="com.romanceabroad.ui.GiftTests" time="10.05">
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 16642
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:40:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testContactUsPage" classname="com.romanceabroad.ui.ContactUsTest" time="10.631">
+    <system-out><![CDATA[Collect elements in list
+Start using loop with size of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Pre-Sales Questions
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Technical support
+Wait element of list is clickable
+Click element of list
+Create new webelement of list
+Create new String with text from element of list
+Value of list: Other
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 47680
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:40:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testBlog" classname="com.romanceabroad.ui.BlogTest" time="8.378">
+    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 22241
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 08, 2021 7:40:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>
