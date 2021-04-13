@@ -10,39 +10,39 @@ import org.testng.annotations.Test;
 
 @Listeners(VideoListener.class)
 
-public class MainPageTests extends BaseUI {
+public class MainPageTests extends BaseUITestWithSauceLabs {
 
 
     //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!
 
-    @Video(name = "Registration test")
-    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
-
-    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
-
-        mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration(email, password);
-        mainPage.clickButtonNext();
-        mainPage.completeSecondPartOfRegistration(BaseActions.generateNewNumber(Data.userNameInput, 10), day,
-                month, year, phone, city, location);
-        mainPage.clickCheckBoxConfirmation();
-    }
-
-
-    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
-    public void testSignIn(String email, String password, boolean requirement){
-        mainPage.clickSignInTab();
-        mainPage.completeSignInForm(email, password);
-        mainPage.clickButtonSignIn();
-        if(!requirement) {
-            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']"))));
-            //Assert.assertTrue(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']")).isDisplayed());
-        }
+ //   @Video(name = "Registration test")
+//    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
+//
+//    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
+//
+//        mainPage.clickJoinButton();
+//        mainPage.completeFirstPartOfRegistration(email, password);
+//        mainPage.clickButtonNext();
+//        mainPage.completeSecondPartOfRegistration(BaseActions.generateNewNumber(Data.userNameInput, 10), day,
+//                month, year, phone, city, location);
+//        mainPage.clickCheckBoxConfirmation();
+//    }
 
 
-
-    }
-
+//    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
+//    public void testSignIn(String email, String password, boolean requirement){
+//        mainPage.clickSignInTab();
+//        mainPage.completeSignInForm(email, password);
+//        mainPage.clickButtonSignIn();
+//        if(!requirement) {
+//            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']"))));
+//            //Assert.assertTrue(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']")).isDisplayed());
+//        }
+//
+//
+//
+//    }
+//
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickname, boolean requirement) {
         System.out.println(email);

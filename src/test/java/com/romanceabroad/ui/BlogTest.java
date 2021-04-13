@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 @Listeners(VideoListener.class)
 
-public class BlogTest extends BaseUI{
+public class BlogTest extends BaseUITestWithSauceLabs{
 
     @Video(name = "Blog test")
     @Test

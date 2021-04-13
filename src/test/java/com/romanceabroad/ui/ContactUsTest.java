@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 
 @Listeners(VideoListener.class)
 
-public class ContactUsTest extends BaseUI{
+public class ContactUsTest extends BaseUITestWithSauceLabs{
 
     //Works well, except Captcha(asking to enter security code)
-    @Video(name = "ContactUs test")
+ //   @Video(name = "ContactUs test")
     @Test
     public void testContactUsPage(){
         mainPage.clickGiftsLink();
