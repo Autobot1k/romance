@@ -78,18 +78,18 @@
 
     </test>
 
-    <test name="IE TestCases">
-        <parameter name="testBox" value="sauce"/>
-        <parameter name="browser" value="IE"/>
-        <parameter name="version" value="11.285"/>
-        <parameter name="platform" value="Windows 10"/>
+<!--    <test name="IE TestCases">-->
+<!--        <parameter name="testBox" value="sauce"/>-->
+<!--        <parameter name="browser" value="IE"/>-->
+<!--        <parameter name="version" value="11.285"/>-->
+<!--        <parameter name="platform" value="Windows 10"/>-->
 
-        <classes>
+<!--        <classes>-->
 
-            <class name="com.romanceabroad.ui.MainPageTests"/>
+<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
 
-        </classes>
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
 </suite>

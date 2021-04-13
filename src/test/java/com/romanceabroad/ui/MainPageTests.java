@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 @Listeners(VideoListener.class)
 
-public class MainPageTests extends BaseUITestWithSauceLabs {
+public class MainPageTests extends BaseUI {
 
 
     //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!

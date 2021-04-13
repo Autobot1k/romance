@@ -89,16 +89,17 @@ public class BaseUI {
 
                 driver.get("chrome://settings/clearBrowserData");
 
-            } else if (browser.equalsIgnoreCase("IE")) {
-
-                System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
-
-                driver = new InternetExplorerDriver();
-
-                driver.manage().deleteAllCookies();
-
-
-            } else {
+//            } else if (browser.equalsIgnoreCase("IE")) {
+//
+//                System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
+//
+//                driver = new InternetExplorerDriver();
+//
+//                driver.manage().deleteAllCookies();
+//
+//
+//            }
+            }else {
 
                 System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
