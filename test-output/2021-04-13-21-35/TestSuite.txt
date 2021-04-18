@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 0.861 s <<< FAILURE! - in TestSuite
+com.romanceabroad.ui.MainPageTests.setup[Firefox, 86.0, Windows 10, null, public void com.romanceabroad.ui.MainPageTests.testRegistration2(java.lang.String,java.lang.String,boolean)](0)  Time elapsed: 0.699 s  <<< FAILURE!
+java.lang.NullPointerException
+
+com.romanceabroad.ui.MainPageTests.setup[Chrome, 88.0, Windows 10, null, public void com.romanceabroad.ui.MainPageTests.testRegistration2(java.lang.String,java.lang.String,boolean)](0)  Time elapsed: 0.699 s  <<< FAILURE!
+java.lang.NullPointerException
+

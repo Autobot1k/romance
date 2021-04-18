@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 99.362 s <<< FAILURE! - in TestSuite
+com.romanceabroad.ui.MainPageTests.setup[IE, 11.285, Windows 10, public void com.romanceabroad.ui.MainPageTests.testRegistration2(java.lang.String,java.lang.String,boolean)](0)  Time elapsed: 55.089 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'Windows 10', Browser: 'ie', Version: '11.285.', Device: 'unspecified'
+Caused by: org.openqa.selenium.json.JsonException: 
+Unable to determine type from: M. Last 1 characters read: M
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '169.254.15.239', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: driver.version: RemoteWebDriver
+

@@ -4,9 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Conditions extends BaseUI {
+public class Conditions {
 
 //    @Test
 //    public void test14() {
@@ -107,43 +109,43 @@ public class Conditions extends BaseUI {
 //
 
 
-    @Test
-    public void test7() {
-        String info;
-        String actualUrlPrettyWomen;
-
-        List<WebElement> links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
-        System.out.println(links.size());
-
-        for (int i = 0; i < links.size(); i++) {
-
-            info = links.get(i).getText();
-            System.out.println(info);
-            //links.get(i).click();
-            mainPage.ajaxClick(links.get(i));
-
-            if (info.contains("WORK")) {
-                Assert.assertEquals(mainPage.actualTitleHowWeWork(), Data.expectedTitleHowWeWork);
-            }
-            if (info.contains("PRETTY WOMEN")) {
-
-                actualUrlPrettyWomen = driver.getCurrentUrl();
-                Assert.assertEquals(prettyWomenPage.actualTitlePrettyWomenPage(), Data.expectedTitlePrettyWomen);
-                Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
-                driver.findElement(Locators.PRETTY_WOMEN_IMAGES).isDisplayed();
-                if (actualUrlPrettyWomen.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("Everything is good!");
-                }
-            }
-
-            driver.get(Data.MAIN_URL);
-            links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
-
-        }
-
-    }
+//    @Test
+//    public void test7() {
+//        String info;
+//        String actualUrlPrettyWomen;
+//
+//        List<WebElement> links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
+//        System.out.println(links.size());
+//
+//        for (int i = 0; i < links.size(); i++) {
+//
+//            info = links.get(i).getText();
+//            System.out.println(info);
+//            //links.get(i).click();
+//            mainPage.ajaxClick(links.get(i));
+//
+//            if (info.contains("WORK")) {
+//                Assert.assertEquals(mainPage.actualTitleHowWeWork(), Data.expectedTitleHowWeWork);
+//            }
+//            if (info.contains("PRETTY WOMEN")) {
+//
+//                actualUrlPrettyWomen = driver.getCurrentUrl();
+//                Assert.assertEquals(prettyWomenPage.actualTitlePrettyWomenPage(), Data.expectedTitlePrettyWomen);
+//                Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
+//                driver.findElement(Locators.PRETTY_WOMEN_IMAGES).isDisplayed();
+//                if (actualUrlPrettyWomen.contains("#")) {
+//                    Assert.fail("It contains restricted #");
+//                } else {
+//                    System.out.println("Everything is good!");
+//                }
+//            }
+//
+//            driver.get(Data.MAIN_URL);
+//            links = driver.findElements(Locators.TABS_OF_MAIN_PAGE);
+//
+//        }
+//
+//    }
 
 
     //
@@ -214,16 +216,44 @@ public class Conditions extends BaseUI {
 //        }
 //    }
 
+    @Test
+    public void test2(){
+        List<Integer> fruits = new ArrayList<>(Arrays.asList(1,2,3));
+        int sum = fruits.get(1) + fruits.get(2);
+        System.out.println(sum);
+    }
 
     @Test
-    public void test14() {
+    public void test3(){
+        for(int i=0; i<50; i++){
+            System.out.println("you can do it!!!");
+        }
+    }
+
+    @Test
+    public void test() {
+        String fruit1 = "kiwi";
+        String fruit2 = "apple";
+
+        if (fruit1.contains("kiwi") || fruit2.contains("kiwi")) {
+            System.out.println("We have it!!!");
+        } else {
+            Assert.fail("We can't find fruit");
+        }
+    }
+}
+
+
+
+//    @Test
+//    public void test14() {
 //        By linkJoinToday = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
-        mainPage.ajaXClick(Locators.TABS_OF_MAIN_PAGE, 4);
+//        mainPage.ajaXClick(Locators.TABS_OF_MAIN_PAGE, 4);
 //        mainPage.performClick(com.romanceabroad.ui.Locators.TABS_OF_MAIN_PAGE, 4);
 //        mainPage.scrollToTheBottomOfThePage();
 //        WebElement element;
 //        mainPage.ajaxScroll(element = driver.findElement(By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']")));
-    }
-}
+
+
 //
 //}

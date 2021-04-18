@@ -2,6 +2,7 @@ package com.romanceabroad.ui;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,6 +18,8 @@ import org.testng.asserts.SoftAssert;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BaseUI {
     String info;
@@ -39,76 +42,80 @@ public class BaseUI {
     protected TestBox testBox;
     protected TestBrowser testBrowser;
 
-    protected enum TestBox{
-        LOCAL, SAUCE
+    protected enum TestBox {
+        WEB, SAUCE, MOBILE
     }
 
-    protected enum TestBrowser{
-        CHROME, FIREFOX, SAFARI
+    protected enum TestBrowser {
+        CHROME, FIREFOX
     }
 
 
-    @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
-    @Parameters({"browser", "version", "platform", "testbox"})
+    @BeforeMethod(groups = {"user", "admin", "ie"}, alwaysRun = true)
+    @Parameters({"browser", "version", "platform", "testbox", "deviceName"})
 
 //if you don't want to run your testCases inside the class and you use always TestNG.xml, you don't need @Optional parameter
-    public void setup(@Optional("chrome") String browser, @Optional("null") String version, @Optional("null") String platform, @Optional("null") String testbox, Method method) throws MalformedURLException {
+    public void setup(@Optional("chrome") String browser,
+                      @Optional("null") String version,
+                      @Optional("null") String platform,
+                      @Optional("mobile") String box,
+                      @Optional("null") String device, Method method) throws MalformedURLException {
+        Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
 
-        if(testbox.equalsIgnoreCase("local")){
-            testBox = TestBox.LOCAL;
-        }else if(testbox.equalsIgnoreCase("sauce")){
-            testBox =TestBox.SAUCE;
+        if (box.equalsIgnoreCase("web")) {
+            testBox = TestBox.WEB;
+        } else if (box.equalsIgnoreCase("mobile")) {
+            testBox = TestBox.MOBILE;
+        } else if (box.equalsIgnoreCase("sauce")) {
+            testBox = TestBox.SAUCE;
+        }
+        if (browser.equalsIgnoreCase("chrome")) {
+            testBrowser = TestBrowser.CHROME;
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            testBrowser = TestBrowser.FIREFOX;
         }
 
         switch (testBox) {
-            case LOCAL:
+            case WEB:
+                switch (testBrowser) {
+                    case FIREFOX:
+                        System.out.println("WEB TestCases");
+                        System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+                        driver = new FirefoxDriver();
+                        break;
 
-            Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
-            // Check if parameter passed from TestNG is 'firefox'
-            if (browser.equalsIgnoreCase("firefox")) {
+                    case CHROME:
+                        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+                        driver = new ChromeDriver();
+                        driver.get("chrome://settings/clearBrowserData");
+                        break;
 
-                // Create firefox instance
+                    default:
+                        System.out.println("Default");
+                        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+                        driver = new ChromeDriver();
+                        driver.get("chrome://settings/clearBrowserData");
+                        break;
+                }
 
-                System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+                break;
 
-                driver = new FirefoxDriver();
+            case MOBILE:
+                switch (testBrowser) {
+                    case CHROME:
 
-            }
+                        System.out.println("Mobile Chrome");
+                        Map<String, String> mobileEmulation = new HashMap<String, String>();
+                        mobileEmulation.put("deviceName", "iPhone X");
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+                        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+                        driver = new ChromeDriver(chromeOptions);
+                        driver.get("chrome://settings/clearBrowserData");
+                        break;
+                }
+                break;
 
-            // Check if parameter passed as 'chrome'
-
-            else if (browser.equalsIgnoreCase("chrome")) {
-
-                // Set path to chromedriverOld.exe
-
-                System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-
-                // Create chrome instance
-
-                driver = new ChromeDriver();
-
-                driver.get("chrome://settings/clearBrowserData");
-
-//            } else if (browser.equalsIgnoreCase("IE")) {
-//
-//                System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
-//
-//                driver = new InternetExplorerDriver();
-//
-//                driver.manage().deleteAllCookies();
-//
-//
-//            }
-            }else {
-
-                System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-
-                driver = new ChromeDriver();
-
-                driver.get("chrome://settings/clearBrowserData");
-
-            }
-            break;
             case SAUCE:
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("username", "jhndoe90");

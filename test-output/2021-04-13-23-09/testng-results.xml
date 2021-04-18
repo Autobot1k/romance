@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-13T18:09:44 GMT-05:00" name="TestSuite" finished-at="2021-04-13T18:11:18 GMT-05:00" duration-ms="94373">
+    <groups>
+    </groups>
+    <test started-at="2021-04-13T18:09:44 GMT-05:00" name="Chrome Windows TestCases" finished-at="2021-04-13T18:11:18 GMT-05:00" duration-ms="94373">
+      <class name="com.romanceabroad.ui.MainPageTests">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.MainPageTests@37f1104d]" started-at="2021-04-13T18:09:44 GMT-05:00" name="setup" finished-at="2021-04-13T18:09:57 GMT-05:00" duration-ms="12773" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[88.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Windows 10]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.MainPageTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.MainPageTests@37f1104d]" started-at="2021-04-13T18:09:57 GMT-05:00" name="testRegistration2" data-provider="Registration2" finished-at="2021-04-13T18:11:18 GMT-05:00" duration-ms="80889" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAA@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[James7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method is-config="true" signature="afterActions(org.testng.ITestResult)[pri:0, instance:com.romanceabroad.ui.MainPageTests@37f1104d]" started-at="2021-04-13T18:11:18 GMT-05:00" name="afterActions" finished-at="2021-04-13T18:11:18 GMT-05:00" duration-ms="598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRegistration2 status=SUCCESS method=MainPageTests.testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.MainPageTests@37f1104d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+      </class> <!-- com.romanceabroad.ui.MainPageTests -->
+    </test> <!-- Chrome Windows TestCases -->
+  </suite> <!-- TestSuite -->
+</testng-results>
