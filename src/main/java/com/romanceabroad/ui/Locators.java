@@ -7,6 +7,8 @@ public class Locators {
     public static final By H1_TITLE = By.xpath("//h1");
 
     //com.romanceabroad.ui.MainPage
+
+    public static final By MOBILE_MENU = By.xpath("//span[@class='navbar-toggler-icon']");
     public static final By FIND_YOU_TUBE_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By CLICK_YOU_TUBE_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
     public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li//a");
@@ -59,6 +61,7 @@ public class Locators {
     public static final By PRETTY_WOMEN_PAGE_TITLE = By.xpath("//h1");
     public static final By PRETTY_WOMEN_IMAGES = By.xpath("//a[@class='g-pic-border g-rounded']");
     public static final By LIST_OF_WOMEN = By.xpath("//div[@class='text-overflow']");
+    public static final By MOBILE_SEARCH_PARAMETRS = By.xpath("//div[@class='search-param-button mb10']//a");
 
 
     //Photos tab
@@ -84,7 +87,7 @@ public class Locators {
     //Search
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     public static final By DROP_DOWN_LIST_AGE_MIN = By.cssSelector("#age_min");
-    public static final By DROP_DOWN_LIST_AGE_MAX = By.cssSelector("#age_max");
+    public static final By DROP_DOWN_LIST_AGE_MAX = By.cssSelector("select#age_max");
     public static final By SEARCH_CLICK = By.cssSelector("#main_search_button_user_advanced");
 
     //Photos page

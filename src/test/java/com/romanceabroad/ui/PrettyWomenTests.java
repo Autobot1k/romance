@@ -2,8 +2,12 @@ package com.romanceabroad.ui;
 
 import com.automation.remarks.testng.VideoListener;
 import com.automation.remarks.video.annotations.Video;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,10 +17,10 @@ import java.util.List;
 
 public class PrettyWomenTests extends BaseUI {
 
-    public static final boolean testCase1 = true;
-    public static final boolean testCase2 = true;
-    public static final boolean testCase3 = false;
-    public static final boolean testCase4 = true;
+    public static final boolean testCase1 = false;
+    public static final boolean testCase2 = false;
+    public static final boolean testCase3 = true;
+    public static final boolean testCase4 = false;
 
     //Before Optimization
 
@@ -97,10 +101,13 @@ public class PrettyWomenTests extends BaseUI {
 
     @Test(priority = 3, enabled = testCase3, groups = {"admin", "user", "chrome"})
     public void selectRandomDropDownListCase3() {
+
+        mainPage.clickMobileMenu(valueOfBox);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_PRETTY_WOMEN));
         mainPage.clickPrettyWomenTab();
         int sizeOfDropDownList = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_AGE_MAX);
         System.out.println(sizeOfDropDownList);
-
+        prettyWomenPage.clickSearchParametrs(valueOfBox);
         for (int i = 0; i < sizeOfDropDownList; i++) {
             prettyWomenPage.selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_AGE_MAX, "Age MAX");
             prettyWomenPage.javaWaitSec(3);

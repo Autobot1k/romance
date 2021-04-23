@@ -3,6 +3,7 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MainPage extends BaseActions {
 
+    @FindBy(xpath = "//button[@id='show-registration-block']")
+    WebElement registrationButton;
 
 
     String currentUrlBlog;
@@ -23,7 +26,8 @@ public class MainPage extends BaseActions {
     public void clickJoinButton(){
         Reports.log("Wait Join button");
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
-        driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        Reports.log("Click Join button");
+        registrationButton.click();
     }
 
     public void completeFirstPartOfRegistration(String email, String password){
@@ -173,6 +177,12 @@ public class MainPage extends BaseActions {
     public boolean captchTitleIsDisplayed(){
         boolean captchTitleIsDisplayed = driver.findElement(Locators.CAPTCHA_TITLE).isDisplayed();
         return captchTitleIsDisplayed;
+    }
+
+    public void clickMobileMenu(String valueOfBox) {
+        if (valueOfBox.contains("mobile")) {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
     }
 
     public void clickSignInTab(){

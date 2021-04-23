@@ -51,9 +51,11 @@
 <!--    </test>-->
 
     <test name="Chrome TestCases">
+
+        <parameter name="testEnv" value="qa"/>
         <parameter name="testBox" value="web"/>
         <parameter name="version" value="88.0"/>
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="remoteChrome"/>
         <parameter name="platform" value="Windows 10"/>
 
         <classes>
@@ -64,18 +66,19 @@
 
     </test>
 
-    <test name="Firefox TestCases">
-        <parameter name="testBox" value="web"/>
-        <parameter name="browser" value="firefox"/>
-        <parameter name="version" value="86.0"/>
-        <parameter name="platform" value="Windows 10"/>
+<!--    <test name="Firefox TestCases">-->
+<!--        <parameter name="testEnv" value="prod"/>-->
+<!--        <parameter name="testBox" value="web"/>-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="version" value="86.0"/>-->
+<!--        <parameter name="platform" value="Windows 10"/>-->
 
-        <classes>
+<!--        <classes>-->
 
-            <class name="com.romanceabroad.ui.MainPageTests"/>
+<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
 
-        </classes>
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
 </suite>

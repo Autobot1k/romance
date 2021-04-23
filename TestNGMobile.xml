@@ -51,37 +51,39 @@
     <!--    </test>-->
 
     <test name="Galaxy S5 TestCases">
+
+        <parameter name="testEnv" value="qa"/>
         <parameter name="testBox" value="mobile"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="deviceName" value="Galaxy S5"/>
 
         <classes>
-            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTests"/>
         </classes>
 
     </test>
 
-    <test name="iPhone TestCases">
-        <parameter name="testBox" value="mobile"/>
-        <parameter name="browser" value="chrome"/>
-        <parameter name="deviceName" value="iPhone X"/>
+<!--    <test name="iPhone TestCases">-->
+<!--        <parameter name="testBox" value="mobile"/>-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="deviceName" value="iPhone X"/>-->
 
-        <classes>
-            <class name="com.romanceabroad.ui.MainPageTests"/>
-        </classes>
+<!--        <classes>-->
+<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
-    <test name="Nexus TestCases">
-        <parameter name="testBox" value="mobile"/>
-        <parameter name="browser" value="chrome"/>
-        <parameter name="deviceName" value="Nexus 5"/>
+<!--    <test name="Nexus TestCases">-->
+<!--        <parameter name="testBox" value="mobile"/>-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="deviceName" value="Nexus 5"/>-->
 
-        <classes>
-            <class name="com.romanceabroad.ui.MainPageTests"/>
-        </classes>
+<!--        <classes>-->
+<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
     <!--    <test name="Firefox Windows TestCases">-->
     <!--        <parameter name="testBox" value="sauce"/>-->

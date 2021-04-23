@@ -15,7 +15,7 @@ public class MainPageTests extends BaseUI {
 
     //Sometimes it doesn't click confirmation checkbox for the 2nd modal window in every browser during registration, but sometimes it works!
 
- //   @Video(name = "Registration test")
+    //   @Video(name = "Registration test")
 //    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
 //
 //    public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
@@ -29,7 +29,7 @@ public class MainPageTests extends BaseUI {
 //    }
 
 
-//    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
+    //    @Test(dataProvider = "Sign In", dataProviderClass = DataProviders.class)
 //    public void testSignIn(String email, String password, boolean requirement){
 //        mainPage.clickSignInTab();
 //        mainPage.completeSignInForm(email, password);
@@ -58,6 +58,7 @@ public class MainPageTests extends BaseUI {
         }
     }
 }
+
 
 //    @Test()
 //    public void testVideoWebElement() throws InterruptedException {
