@@ -14,6 +14,11 @@ public class Locators {
     public static final By TABS_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li//a");
     public static final By CAPTCHA_TITLE = By.xpath("//label[@for='captcha']");
     public static final By PAGE_TITLE = By.xpath("//h1");
+    public static final By LINK_SIGN_IN = By.xpath("//a[@href='https://romanceabroad.com/users/login_form'][@id='ajax_login_link']");
+    public static final By TEXT_FIELD_EMAIL_SIGN_IN = By.xpath("//div[@class='col-xs-8']//input[@id='email']");
+    public static final By TEXT_FIELD_PASSWORD_SIGN_IN = By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+    public static final By LOGIN_BUTTON_SIGN_IN = By.xpath("//button[@name='logbtn']");
+    public static final By ALERT_WRONG_PASSWORD = By.xpath("//div[@class = 'error alert-danger alert-warning_pop_']");
 
 
 
@@ -23,8 +28,8 @@ public class Locators {
 
     //Registration
     public static final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
-    public static final By EMAIL_FIELD = By.cssSelector("input#email");
-    public static final By PASSWORD_FIELD = By.cssSelector("input#password");
+    public static final By EMAIL_FIELD_REGISTRATION = By.cssSelector("input#email");
+    public static final By PASSWORD_FIELD_REGISTARTION = By.cssSelector("input#password");
     public static final By TOOLTIP_ERROR = By.xpath("//button[@id='show-registration-block']");
     public static final By BUTTON_NEXT = By.xpath("//div[@class='col-xs-12']//button[@data-action='next-page'][text()='Next']");
     public static final By USERNAME_FIELD = By.cssSelector("#nickname");

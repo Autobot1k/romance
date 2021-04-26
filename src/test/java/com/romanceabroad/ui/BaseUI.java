@@ -63,7 +63,7 @@ public class BaseUI {
     public void setup(@Optional("chrome") String browser,
                       @Optional("null") String version,
                       @Optional("null") String platform,
-                      @Optional("mobile") String box,
+                      @Optional("web") String box,
                       @Optional("null") String device,
                       @Optional("qa") String env, Method method) throws MalformedURLException {
         Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
@@ -184,6 +184,6 @@ public class BaseUI {
                 Reports.fail(driver, testResult.getName());
             }
             Reports.stop();
-            //driver.quit();
+            driver.quit();
         }
 }

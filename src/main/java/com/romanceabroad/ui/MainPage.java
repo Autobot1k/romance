@@ -33,16 +33,16 @@ public class MainPage extends BaseActions {
     public void completeFirstPartOfRegistration(String email, String password){
         Reports.log("Wait email text field");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_FIELD)));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.EMAIL_FIELD_REGISTRATION)));
 
         Reports.log("Type email in text field: " + email);
-        driver.findElement(Locators.EMAIL_FIELD).sendKeys(email);
+        driver.findElement(Locators.EMAIL_FIELD_REGISTRATION).sendKeys(email);
 
         Reports.log("Wait password text field");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD)));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.PASSWORD_FIELD_REGISTARTION)));
 
         Reports.log("Type password in text field: " + password);
-        driver.findElement(Locators.PASSWORD_FIELD).sendKeys(password);
+        driver.findElement(Locators.PASSWORD_FIELD_REGISTARTION).sendKeys(password);
     }
 
     public void clickButtonNext(){
@@ -152,12 +152,12 @@ public class MainPage extends BaseActions {
     }
 
     public WebElement passwordField(){
-        WebElement passwordField = driver.findElement(Locators.PASSWORD_FIELD);
+        WebElement passwordField = driver.findElement(Locators.PASSWORD_FIELD_REGISTARTION);
         return passwordField;
     }
 
     public WebElement emailField(){
-        WebElement emailField = driver.findElement(Locators.EMAIL_FIELD);
+        WebElement emailField = driver.findElement(Locators.EMAIL_FIELD_REGISTRATION);
         return emailField;
     }
 
@@ -193,6 +193,17 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LINK_PHOTOS).click();
     }
 
+    public void clickSignIn(){
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_SIGN_IN));
+        driver.findElement(Locators.LINK_SIGN_IN).click();
+    }
+
+    public void fillInSignInForm(String password){
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL_SIGN_IN).sendKeys(Data.email1);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD_SIGN_IN).sendKeys(password);
+        driver.findElement(Locators.LOGIN_BUTTON_SIGN_IN).click();
+    }
 
 
 }

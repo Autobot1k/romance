@@ -47,4 +47,32 @@ public class DataProviders {
                 {Data.email4, Data.passwordInput, true}
         };
     }
+
+    @DataProvider(name = "NewRequirementsForPassword")
+    public static Object[][] newRequirementsForPassword() {
+        return new Object[][] {
+                {"Boston1!", true},
+                {"Boston2@", true},
+                {"#Boston3", true},
+                {"$Bos4ton", true},
+                {"Bos%5ton", true},
+                {"Bos6^ton", true},
+                {"New York&7", true},
+                {"Miami**12", true},
+                {"Miami*-13", true},
+                {"Miami*-(14)", true},
+                {"Miami*-(13)+", true},
+                {"Miami.,90", true},
+                {"FLORIDA", false},
+                {"***", false},
+                {"36363663", false},
+                {"nevermind", false},
+                {"Fa1234%", false},  // less than 8 characters
+                {"Nevermi@", false}, //no digits
+                {"Arizona1", false}, // no spec characters
+                {"GLORY12*", false}, // no lower case
+                {"lowerc#1", false}, // no upper case
+                {"Polock12", false}, // no spec charact
+        };
+    }
 }
